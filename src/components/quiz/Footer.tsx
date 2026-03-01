@@ -39,15 +39,6 @@ export default function Footer() {
           >
             サカナクション公式
           </a>
-          <a
-            href="https://nf.sakanaction.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-link transition-colors duration-200"
-            style={{ color: "#9ca3af" }}
-          >
-            NF member
-          </a>
         </div>
       </div>
     </footer>

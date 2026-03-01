@@ -345,7 +345,6 @@ export default function QuizGame({ mode }: QuizGameProps) {
               出典: {raw.source as string}
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
-              <OfficialLink href="https://nf.sakanaction.jp" label="🐟 NF member" />
               {category === "サカナLOCKS!" && (
                 <OfficialLink href="https://www.tfm.co.jp/lock/sakana/" label="📻 サカナLOCKS!" />
               )}
