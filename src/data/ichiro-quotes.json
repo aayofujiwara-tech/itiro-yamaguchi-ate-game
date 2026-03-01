@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "quote": "音楽を楽しむ空間で音楽に関わる仕事のことも知ってもらいたい",
+    "answer": "NIGHT FISHINGのコンセプトについて語ったインタビュー",
+    "options": [
+      "NIGHT FISHINGのコンセプトについて語ったインタビュー",
+      "サカナLOCKS!での授業中",
+      "YouTube配信での雑談",
+      "834.194リリース時の記者会見"
+    ],
+    "source": "美術手帖インタビュー（2015年）",
+    "category": "インタビュー",
+    "difficulty": "hard"
+  },
+  {
+    "id": 2,
+    "quote": "僕らは変わり続けることで変わらないでいられる",
+    "answer": "アルバム制作について語った音楽雑誌インタビュー",
+    "options": [
+      "アルバム制作について語った音楽雑誌インタビュー",
+      "ライブMCでファンに語りかけた場面",
+      "NF OFFLINEでの配信中",
+      "サカナLOCKS!最終回"
+    ],
+    "source": "ROCKIN'ON JAPAN インタビュー",
+    "category": "インタビュー",
+    "difficulty": "medium"
+  },
+  {
+    "id": 3,
+    "quote": "夜に釣りをする人は、何かを待っているんじゃなくて、その時間そのものを楽しんでいる",
+    "answer": "NIGHT FISHINGの名前の由来を語った配信",
+    "options": [
+      "NIGHT FISHINGの名前の由来を語った配信",
+      "ラジオ番組でのリスナー相談",
+      "ドキュメンタリー映像のナレーション",
+      "雑誌POPEYEでのエッセイ"
+    ],
+    "source": "YouTube配信（2020年）",
+    "category": "YouTube / Instagram Live配信",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "quote": "完璧を目指すよりも、まず終わらせることが大事",
+    "answer": "楽曲制作配信で作業しながらの発言",
+    "options": [
+      "楽曲制作配信で作業しながらの発言",
+      "サカナLOCKS!で生徒に向けた助言",
+      "音楽プロデューサーとの対談",
+      "SAKANAQUARIUMのMC"
+    ],
+    "source": "YouTube楽曲制作配信（2023年）",
+    "category": "YouTube / Instagram Live配信",
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "quote": "お客さんがいて初めてライブは完成する",
+    "answer": "有観客ライブ再開時のMC",
+    "options": [
+      "有観客ライブ再開時のMC",
+      "NF OFFLINEでの挨拶",
+      "音楽番組でのコメント",
+      "ファンクラブ会報でのメッセージ"
+    ],
+    "source": "SAKANAQUARIUM（2022年）",
+    "category": "ライブMC",
+    "difficulty": "easy"
+  }
+]

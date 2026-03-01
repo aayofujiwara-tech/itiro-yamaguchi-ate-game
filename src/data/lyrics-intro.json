@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "lyricsHint": "夜の東側に",
+    "answer": "夜の踊り子",
+    "options": ["夜の踊り子", "ナイトフィッシングイズグッド", "月の椅子", "ネイティブダンサー"],
+    "hintLength": 5,
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "lyricsHint": "忘れられない",
+    "answer": "忘れられないの",
+    "options": ["忘れられないの", "グッドバイ", "ルーキー", "マイノリティ"],
+    "hintLength": 6,
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "lyricsHint": "変わり続ける",
+    "answer": "アイデンティティ",
+    "options": ["アイデンティティ", "ミュージック", "三日月サンセット", "セプテンバー"],
+    "hintLength": 6,
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "lyricsHint": "海の街を",
+    "answer": "新宝島",
+    "options": ["新宝島", "サンプル", "アルクアラウンド", "Aoi"],
+    "hintLength": 4,
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "lyricsHint": "白い部屋の中",
+    "answer": "ミュージック",
+    "options": ["ミュージック", "目が明く藍色", "ネプトゥーヌス", "スローモーション"],
+    "hintLength": 6,
+    "difficulty": "hard"
+  }
+]

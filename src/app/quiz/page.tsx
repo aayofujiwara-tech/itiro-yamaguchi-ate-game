@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import QuizGame from "@/components/quiz/QuizGame";
+import PasswordGate from "@/components/quiz/PasswordGate";
+import QuizModeSelect from "@/components/quiz/QuizModeSelect";
 
 export const metadata: Metadata = {
-  title: "配信画像当てクイズ | 山口一郎",
+  title: "サカナクション検定 | クイズモード選択",
   description:
-    "山口一郎さんの配信画像を見て、どの配信回のものかを当てるクイズゲームです。",
+    "サカナクションに関する5つのクイズモードに挑戦しよう。配信画像当て、カルトクイズ、歌詞穴埋め、イントロ歌詞当て、一郎語録当て。",
   openGraph: {
-    title: "配信画像当てクイズ",
-    description: "山口一郎さんの配信画像を当てよう！",
+    title: "サカナクション検定",
+    description: "あなたのサカナクション偏差値は？",
     type: "website",
   },
 };
 
 export default function QuizPage() {
-  return <QuizGame />;
+  return (
+    <PasswordGate>
+      <QuizModeSelect />
+    </PasswordGate>
+  );
 }

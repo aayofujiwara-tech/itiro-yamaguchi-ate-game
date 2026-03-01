@@ -1,10 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
 interface QuizSummaryProps {
   score: number;
   total: number;
   hintUsedCount: number;
   onRestart: () => void;
+  backHref?: string;
 }
 
 export default function QuizSummary({
@@ -12,6 +15,7 @@ export default function QuizSummary({
   total,
   hintUsedCount,
   onRestart,
+  backHref,
 }: QuizSummaryProps) {
   const percentage = Math.round((score / total) * 100);
 
@@ -86,26 +90,49 @@ export default function QuizSummary({
           </p>
         </div>
 
-        <button
-          onClick={onRestart}
-          className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
-          style={{
-            backgroundColor: "transparent",
-            color: "var(--accent)",
-            border: "1px solid var(--accent)",
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = "rgba(0, 212, 255, 0.1)";
-            e.currentTarget.style.boxShadow =
-              "0 0 20px rgba(0, 212, 255, 0.3)";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = "transparent";
-            e.currentTarget.style.boxShadow = "none";
-          }}
-        >
-          もう一度挑戦する
-        </button>
+        <div className="space-y-3">
+          <button
+            onClick={onRestart}
+            className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
+            style={{
+              backgroundColor: "transparent",
+              color: "var(--accent)",
+              border: "1px solid var(--accent)",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(0, 212, 255, 0.1)";
+              e.currentTarget.style.boxShadow =
+                "0 0 20px rgba(0, 212, 255, 0.3)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            もう一度挑戦する
+          </button>
+
+          {backHref && (
+            <Link
+              href={backHref}
+              className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200"
+              style={{
+                color: "var(--text-sub)",
+                border: "1px solid var(--border)",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = "var(--text-main)";
+                e.currentTarget.style.borderColor = "var(--text-sub)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = "var(--text-sub)";
+                e.currentTarget.style.borderColor = "var(--border)";
+              }}
+            >
+              モード選択に戻る
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

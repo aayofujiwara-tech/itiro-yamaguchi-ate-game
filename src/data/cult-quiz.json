@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "サカナクションが結成前に山口一郎と岩寺基晴が組んでいたバンドの名前は？",
+    "answer": "ダッチマン",
+    "options": ["ダッチマン", "フィッシュマン", "ナイトクルー", "アムスフィッシュ"],
+    "category": "バンド歴史",
+    "difficulty": "hard"
+  },
+  {
+    "id": 2,
+    "question": "サカナクションのバンド名の由来は「魚」と何を組み合わせた造語？",
+    "answer": "アクション",
+    "options": ["アクション", "エモーション", "セッション", "リアクション"],
+    "category": "バンド歴史",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "NIGHT FISHINGが初めて開催された年は？",
+    "answer": "2016年",
+    "options": ["2016年", "2015年", "2017年", "2018年"],
+    "category": "NF / NIGHT FISHING",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "question": "サカナクションの結成地はどこ？",
+    "answer": "北海道札幌市",
+    "options": ["北海道札幌市", "東京都渋谷区", "神奈川県横浜市", "北海道小樽市"],
+    "category": "バンド歴史",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "山口一郎がサカナLOCKS!で務めていた役職名は？",
+    "answer": "校長",
+    "options": ["校長", "教頭", "担任", "副校長"],
+    "category": "メディア出演",
+    "difficulty": "medium"
+  }
+]
