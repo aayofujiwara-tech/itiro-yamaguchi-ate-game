@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Footer from "./Footer";
 
 const STORAGE_KEY = "quiz_authenticated";
 
@@ -43,9 +44,10 @@ export default function PasswordGate({ children }: PasswordGateProps) {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4"
+      className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
+      <div className="flex-1 flex items-center justify-center px-4">
       <div className="w-full max-w-sm animate-fade-in">
         <div className="text-center mb-8">
           <h1
@@ -124,6 +126,8 @@ export default function PasswordGate({ children }: PasswordGateProps) {
           </button>
         </form>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 }

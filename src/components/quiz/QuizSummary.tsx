@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Footer from "./Footer";
 
 interface QuizSummaryProps {
   score: number;
@@ -35,105 +36,108 @@ export default function QuizSummary({
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-4"
+      className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
-      <div className="max-w-md w-full text-center animate-fade-in">
-        <h2
-          className="text-3xl font-bold mb-8"
-          style={{ color: "var(--text-main)" }}
-        >
-          クイズ結果
-        </h2>
-
-        <div
-          className="rounded-xl p-8 mb-8"
-          style={{
-            backgroundColor: "var(--bg-card)",
-            border: "1px solid var(--border)",
-          }}
-        >
-          <div
-            className="text-6xl font-bold mb-2"
-            style={{
-              color: getScoreColor(),
-              fontFamily: "Inter, monospace",
-            }}
-          >
-            {score}
-            <span className="text-2xl" style={{ color: "var(--text-sub)" }}>
-              /{total}
-            </span>
-          </div>
-          <div
-            className="text-lg mb-4"
-            style={{
-              color: "var(--text-sub)",
-              fontFamily: "Inter, monospace",
-            }}
-          >
-            正答率 {percentage}%
-          </div>
-          {hintUsedCount > 0 && (
-            <div
-              className="text-sm mb-4"
-              style={{ color: "var(--text-sub)" }}
-            >
-              ヒント使用: {hintUsedCount}回
-            </div>
-          )}
-          <p
-            className="text-base"
+      <div className="flex-1 flex items-center justify-center px-4">
+        <div className="max-w-md w-full text-center animate-fade-in">
+          <h2
+            className="text-3xl font-bold mb-8"
             style={{ color: "var(--text-main)" }}
           >
-            {getMessage()}
-          </p>
-        </div>
+            クイズ結果
+          </h2>
 
-        <div className="space-y-3">
-          <button
-            onClick={onRestart}
-            className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
+          <div
+            className="rounded-xl p-8 mb-8"
             style={{
-              backgroundColor: "transparent",
-              color: "var(--accent)",
-              border: "1px solid var(--accent)",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(0, 212, 255, 0.1)";
-              e.currentTarget.style.boxShadow =
-                "0 0 20px rgba(0, 212, 255, 0.3)";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.boxShadow = "none";
+              backgroundColor: "var(--bg-card)",
+              border: "1px solid var(--border)",
             }}
           >
-            もう一度挑戦する
-          </button>
-
-          {backHref && (
-            <Link
-              href={backHref}
-              className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200"
+            <div
+              className="text-6xl font-bold mb-2"
               style={{
-                color: "var(--text-sub)",
-                border: "1px solid var(--border)",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.color = "var(--text-main)";
-                e.currentTarget.style.borderColor = "var(--text-sub)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.color = "var(--text-sub)";
-                e.currentTarget.style.borderColor = "var(--border)";
+                color: getScoreColor(),
+                fontFamily: "Inter, monospace",
               }}
             >
-              モード選択に戻る
-            </Link>
-          )}
+              {score}
+              <span className="text-2xl" style={{ color: "var(--text-sub)" }}>
+                /{total}
+              </span>
+            </div>
+            <div
+              className="text-lg mb-4"
+              style={{
+                color: "var(--text-sub)",
+                fontFamily: "Inter, monospace",
+              }}
+            >
+              正答率 {percentage}%
+            </div>
+            {hintUsedCount > 0 && (
+              <div
+                className="text-sm mb-4"
+                style={{ color: "var(--text-sub)" }}
+              >
+                ヒント使用: {hintUsedCount}回
+              </div>
+            )}
+            <p
+              className="text-base"
+              style={{ color: "var(--text-main)" }}
+            >
+              {getMessage()}
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <button
+              onClick={onRestart}
+              className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
+              style={{
+                backgroundColor: "transparent",
+                color: "var(--accent)",
+                border: "1px solid var(--accent)",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(0, 212, 255, 0.1)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 20px rgba(0, 212, 255, 0.3)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+              もう一度挑戦する
+            </button>
+
+            {backHref && (
+              <Link
+                href={backHref}
+                className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200"
+                style={{
+                  color: "var(--text-sub)",
+                  border: "1px solid var(--border)",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.color = "var(--text-main)";
+                  e.currentTarget.style.borderColor = "var(--text-sub)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.color = "var(--text-sub)";
+                  e.currentTarget.style.borderColor = "var(--border)";
+                }}
+              >
+                モード選択に戻る
+              </Link>
+            )}
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

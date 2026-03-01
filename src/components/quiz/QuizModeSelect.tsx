@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { ModeConfig } from "@/types/quiz";
+import Footer from "./Footer";
 import imageData from "@/data/quizzes.json";
 import cultData from "@/data/cult-quiz.json";
 import lyricsFillData from "@/data/lyrics-fill.json";
@@ -54,9 +55,10 @@ const modes: ModeConfig[] = [
 export default function QuizModeSelect() {
   return (
     <div
-      className="min-h-screen flex flex-col items-center px-4 py-12 md:py-16"
+      className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
+    <div className="flex-1 flex flex-col items-center px-4 py-12 md:py-16">
       <div className="w-full max-w-3xl animate-fade-in">
         <div className="text-center mb-10">
           <h1
@@ -109,6 +111,8 @@ export default function QuizModeSelect() {
           ))}
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }

@@ -14,6 +14,8 @@ import LyricsFillQuestion from "./LyricsFillQuestion";
 import LyricsIntroQuestion from "./LyricsIntroQuestion";
 import QuoteQuestion from "./QuoteQuestion";
 import SpotifyLink from "./SpotifyLink";
+import OfficialLink from "./OfficialLink";
+import Footer from "./Footer";
 
 import imageData from "@/data/quizzes.json";
 import cultData from "@/data/cult-quiz.json";
@@ -163,10 +165,13 @@ export default function QuizGame({ mode }: QuizGameProps) {
     return (
       <PasswordGate>
         <div
-          className="min-h-screen flex items-center justify-center"
+          className="min-h-screen flex flex-col"
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
-          <div className="skeleton-loader w-16 h-16 rounded-full" />
+          <div className="flex-1 flex items-center justify-center">
+            <div className="skeleton-loader w-16 h-16 rounded-full" />
+          </div>
+          <Footer />
         </div>
       </PasswordGate>
     );
@@ -265,25 +270,42 @@ export default function QuizGame({ mode }: QuizGameProps) {
   };
 
   const renderPostAnswerContent = () => {
+    const archiveUrl = raw.archiveUrl as string | undefined;
+
     switch (mode) {
+      case "image":
+        return (
+          <div className="flex flex-wrap gap-2 justify-center animate-fade-in">
+            {archiveUrl && (
+              <OfficialLink href={archiveUrl} label="📺 この配信を観る" />
+            )}
+            <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+          </div>
+        );
       case "cult":
         return (
-          <div
-            className="text-sm px-4 py-3 rounded-md animate-fade-in"
-            style={{
-              backgroundColor: "rgba(0, 212, 255, 0.05)",
-              border: "1px solid rgba(0, 212, 255, 0.15)",
-              color: "var(--text-sub)",
-            }}
-          >
-            <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
-            {raw.explanation as string}
+          <div className="space-y-3 animate-fade-in">
+            <div
+              className="text-sm px-4 py-3 rounded-md"
+              style={{
+                backgroundColor: "rgba(0, 212, 255, 0.05)",
+                border: "1px solid rgba(0, 212, 255, 0.15)",
+                color: "var(--text-sub)",
+              }}
+            >
+              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+              {raw.explanation as string}
+            </div>
+            <div className="flex justify-center">
+              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+            </div>
           </div>
         );
       case "lyrics-fill":
         return (
-          <div className="text-center animate-fade-in">
+          <div className="flex flex-wrap gap-2 justify-center animate-fade-in">
             <SpotifyLink songTitle={raw.songTitle as string} />
+            <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
           </div>
         );
       case "lyrics-intro":
@@ -295,12 +317,16 @@ export default function QuizGame({ mode }: QuizGameProps) {
             >
               {raw.answer as string}
             </p>
-            <SpotifyLink songTitle={raw.answer as string} />
+            <div className="flex flex-wrap gap-2 justify-center">
+              <SpotifyLink songTitle={raw.answer as string} />
+              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+            </div>
           </div>
         );
-      case "quotes":
+      case "quotes": {
+        const category = raw.category as string;
         return (
-          <div className="space-y-2 animate-fade-in">
+          <div className="space-y-3 animate-fade-in">
             <div
               className="text-sm px-4 py-3 rounded-md"
               style={{
@@ -318,8 +344,15 @@ export default function QuizGame({ mode }: QuizGameProps) {
             >
               出典: {raw.source as string}
             </p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <OfficialLink href="https://nf.sakanaction.jp" label="🐟 NF member" />
+              {category === "サカナLOCKS!" && (
+                <OfficialLink href="https://www.tfm.co.jp/lock/sakana/" label="📻 サカナLOCKS!" />
+              )}
+            </div>
           </div>
         );
+      }
       default:
         return null;
     }
@@ -328,9 +361,10 @@ export default function QuizGame({ mode }: QuizGameProps) {
   return (
     <PasswordGate>
       <div
-        className="min-h-screen flex flex-col items-center px-4 py-8 md:py-12"
+        className="min-h-screen flex flex-col"
         style={{ backgroundColor: "var(--bg-primary)" }}
       >
+      <div className="flex-1 flex flex-col items-center px-4 py-8 md:py-12">
         <div className="w-full max-w-2xl" key={fadeKey}>
           {/* Header */}
           <div className="flex items-center justify-between mb-6 animate-fade-in">
@@ -422,6 +456,8 @@ export default function QuizGame({ mode }: QuizGameProps) {
             </QuizResult>
           )}
         </div>
+      </div>
+      <Footer />
       </div>
     </PasswordGate>
   );
