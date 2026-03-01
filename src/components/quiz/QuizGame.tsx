@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import type { Quiz } from "@/types/quiz";
 import quizData from "@/data/quizzes.json";
+import PasswordGate from "./PasswordGate";
 import QuizImage from "./QuizImage";
 import QuizOptions from "./QuizOptions";
 import QuizHint from "./QuizHint";
@@ -87,23 +88,27 @@ export default function QuizGame() {
 
   if (quizzes.length === 0) {
     return (
-      <div
-        className="min-h-screen flex items-center justify-center"
-        style={{ backgroundColor: "var(--bg-primary)" }}
-      >
-        <div className="skeleton-loader w-16 h-16 rounded-full" />
-      </div>
+      <PasswordGate>
+        <div
+          className="min-h-screen flex items-center justify-center"
+          style={{ backgroundColor: "var(--bg-primary)" }}
+        >
+          <div className="skeleton-loader w-16 h-16 rounded-full" />
+        </div>
+      </PasswordGate>
     );
   }
 
   if (finished) {
     return (
-      <QuizSummary
-        score={score}
-        total={quizzes.length}
-        hintUsedCount={hintUsedCount}
-        onRestart={initializeGame}
-      />
+      <PasswordGate>
+        <QuizSummary
+          score={score}
+          total={quizzes.length}
+          hintUsedCount={hintUsedCount}
+          onRestart={initializeGame}
+        />
+      </PasswordGate>
     );
   }
 
@@ -111,85 +116,87 @@ export default function QuizGame() {
   const currentOptions = shuffledOptions[currentIndex] || currentQuiz.options;
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center px-4 py-8 md:py-12"
-      style={{ backgroundColor: "var(--bg-primary)" }}
-    >
-      <div className="w-full max-w-2xl" key={fadeKey}>
-        {/* Header */}
-        <div className="flex items-center justify-between mb-6 animate-fade-in">
-          <h1
-            className="text-lg md:text-xl font-bold"
-            style={{ color: "var(--text-main)" }}
-          >
-            配信画像当てクイズ
-          </h1>
-          <div
-            className="text-sm"
-            style={{
-              color: "var(--text-sub)",
-              fontFamily: "Inter, monospace",
-            }}
-          >
-            {currentIndex + 1} / {quizzes.length}
+    <PasswordGate>
+      <div
+        className="min-h-screen flex flex-col items-center px-4 py-8 md:py-12"
+        style={{ backgroundColor: "var(--bg-primary)" }}
+      >
+        <div className="w-full max-w-2xl" key={fadeKey}>
+          {/* Header */}
+          <div className="flex items-center justify-between mb-6 animate-fade-in">
+            <h1
+              className="text-lg md:text-xl font-bold"
+              style={{ color: "var(--text-main)" }}
+            >
+              配信画像当てクイズ
+            </h1>
+            <div
+              className="text-sm"
+              style={{
+                color: "var(--text-sub)",
+                fontFamily: "Inter, monospace",
+              }}
+            >
+              {currentIndex + 1} / {quizzes.length}
+            </div>
           </div>
-        </div>
 
-        {/* Progress bar */}
-        <div
-          className="w-full h-1 rounded-full mb-8 animate-fade-in"
-          style={{ backgroundColor: "var(--border)" }}
-        >
+          {/* Progress bar */}
           <div
-            className="h-full rounded-full transition-all duration-500 ease-out"
-            style={{
-              width: `${((currentIndex + 1) / quizzes.length) * 100}%`,
-              backgroundColor: "var(--accent)",
-              boxShadow: "0 0 8px rgba(0, 212, 255, 0.4)",
-            }}
-          />
-        </div>
+            className="w-full h-1 rounded-full mb-8 animate-fade-in"
+            style={{ backgroundColor: "var(--border)" }}
+          >
+            <div
+              className="h-full rounded-full transition-all duration-500 ease-out"
+              style={{
+                width: `${((currentIndex + 1) / quizzes.length) * 100}%`,
+                backgroundColor: "var(--accent)",
+                boxShadow: "0 0 8px rgba(0, 212, 255, 0.4)",
+              }}
+            />
+          </div>
 
-        {/* Quiz image */}
-        <div className="animate-fade-in">
-          <QuizImage
-            imageUrl={currentQuiz.imageUrl}
-            questionNumber={currentIndex + 1}
-          />
-        </div>
+          {/* Quiz image */}
+          <div className="animate-fade-in">
+            <QuizImage
+              imageUrl={currentQuiz.imageUrl}
+              questionNumber={currentIndex + 1}
+            />
+          </div>
 
-        {/* Hint */}
-        <div className="animate-fade-in">
-          <QuizHint
-            hint={currentQuiz.hint}
-            showHint={showHint}
-            hintUsed={hintUsed}
-            answered={answered}
-            onShowHint={handleShowHint}
-          />
-        </div>
+          {/* Hint */}
+          <div className="animate-fade-in">
+            <QuizHint
+              hint={currentQuiz.hint}
+              showHint={showHint}
+              hintUsed={hintUsed}
+              answered={answered}
+              onShowHint={handleShowHint}
+            />
+          </div>
 
-        {/* Options */}
-        <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-          <QuizOptions
-            options={currentOptions}
-            selectedOption={selectedOption}
-            correctAnswer={currentQuiz.answer}
-            answered={answered}
-            onSelect={handleSelect}
-          />
-        </div>
+          {/* Options */}
+          <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <QuizOptions
+              options={currentOptions}
+              selectedOption={selectedOption}
+              correctAnswer={currentQuiz.answer}
+              answered={answered}
+              onSelect={handleSelect}
+            />
+          </div>
 
-        {/* Result */}
-        {answered && isCorrect !== null && (
-          <QuizResult
-            isCorrect={isCorrect}
-            correctAnswer={currentQuiz.answer}
-            onNext={handleNext}
-            isLast={currentIndex + 1 >= quizzes.length}
-          />
-        )}
+          {/* Result */}
+          {answered && isCorrect !== null && (
+            <QuizResult
+              isCorrect={isCorrect}
+              correctAnswer={currentQuiz.answer}
+              onNext={handleNext}
+              isLast={currentIndex + 1 >= quizzes.length}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </PasswordGate>
   );
 }
