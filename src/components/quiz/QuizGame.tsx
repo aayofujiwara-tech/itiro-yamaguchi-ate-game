@@ -185,7 +185,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
           total={quizzes.length}
           hintUsedCount={hintUsedCount}
           onRestart={initializeGame}
-          backHref="/quiz"
+          backHref="/"
         />
       </PasswordGate>
     );
@@ -392,7 +392,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
           <div className="flex items-center justify-between mb-6 animate-fade-in">
             <div className="flex items-center gap-3">
               <Link
-                href="/quiz"
+                href="/"
                 className="text-sm transition-colors duration-200"
                 style={{ color: "var(--text-sub)" }}
                 onMouseOver={(e) => {

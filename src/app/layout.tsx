@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "配信画像当てクイズ",
-  description: "山口一郎さんの配信画像を当てるクイズゲーム",
+  title: "サカナクション検定",
+  description: "あなたのサカナクション偏差値は？ 5つのクイズモードに挑戦しよう。",
 };
 
 export default function RootLayout({

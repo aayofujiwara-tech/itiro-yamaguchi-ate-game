@@ -122,7 +122,7 @@ export default function DisclaimerPage() {
           </section>
 
           <Link
-            href="/quiz"
+            href="/"
             className="footer-link inline-block text-sm transition-colors duration-200"
             style={{ color: "var(--text-sub)" }}
           >
