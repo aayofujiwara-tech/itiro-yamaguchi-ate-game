@@ -6,7 +6,9 @@
     "options": ["ダッチマンtheサンコンズ", "ダッチマン", "アムスフィッシュ", "ナイトフィッシャーズ"],
     "category": "バンド歴史",
     "difficulty": "hard",
-    "explanation": "1998年に札幌第一高等学校の同級生で結成。2000年に「ダッチマン」に改称した。"
+    "explanation": "1998年に札幌第一高等学校の同級生で結成。2000年に「ダッチマン」に改称した。",
+    "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
+    "sourceLabel": "Wikipedia - サカナクション"
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "options": ["草刈愛美", "岩寺基晴", "江島啓一", "岡崎英美"],
     "category": "メンバー",
     "difficulty": "medium",
-    "explanation": "ベース・コーラス担当の草刈愛美は東京都出身。愛称は「姐さん」。"
+    "explanation": "ベース・コーラス担当の草刈愛美は東京都出身。愛称は「姐さん」。",
+    "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
+    "sourceLabel": "Wikipedia - サカナクション"
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "options": ["恵比寿LIQUIDROOM", "渋谷WWW", "新木場STUDIO COAST", "代官山UNIT"],
     "category": "NF / イベント",
     "difficulty": "hard",
-    "explanation": "2015年7月3日、アートやカルチャーと音楽の新しい楽しみ方を提案するイベントとして初開催された。"
+    "explanation": "2015年7月3日、アートやカルチャーと音楽の新しい楽しみ方を提案するイベントとして初開催された。",
+    "sourceUrl": "https://spincoaster.com/sakanaction-night-fishing",
+    "sourceLabel": "Spincoaster - NIGHT FISHINGレポート"
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "options": ["RISING SUN ROCK FESTIVAL", "FUJI ROCK FESTIVAL", "SUMMER SONIC", "ROCK IN JAPAN"],
     "category": "バンド歴史",
     "difficulty": "medium",
-    "explanation": "小樽市で開催されたRSRの一般公募枠「RISING STAR」にCD未発売ながら出演し、注目を集めた。"
+    "explanation": "小樽市で開催されたRSRの一般公募枠「RISING STAR」にCD未発売ながら出演し、注目を集めた。",
+    "sourceUrl": "https://ja.wikipedia.org/wiki/NIGHT_FISHING",
+    "sourceLabel": "Wikipedia - NIGHT FISHING"
   },
   {
     "id": 5,
@@ -42,6 +50,8 @@
     "options": ["シュガー&シュガー", "サカナのひかり", "ミュージックラボ", "音の水族館"],
     "category": "メディア出演",
     "difficulty": "medium",
-    "explanation": "2019年9月〜2021年12月にNHK Eテレで放送された。"
+    "explanation": "2019年9月〜2021年12月にNHK Eテレで放送された。",
+    "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
+    "sourceLabel": "Wikipedia - サカナクション"
   }
 ]

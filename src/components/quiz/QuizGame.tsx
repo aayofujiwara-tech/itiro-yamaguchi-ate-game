@@ -269,6 +269,27 @@ export default function QuizGame({ mode }: QuizGameProps) {
     }
   };
 
+  const renderSourceLink = () => {
+    const sourceUrl = raw.sourceUrl as string | undefined;
+    const sourceLabel = raw.sourceLabel as string | undefined;
+    if (!sourceUrl || !sourceLabel) return null;
+    return (
+      <p className="text-xs text-center">
+        <a
+          href={sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors duration-200"
+          style={{ color: "#9ca3af" }}
+          onMouseOver={(e) => { e.currentTarget.style.color = "var(--accent)"; }}
+          onMouseOut={(e) => { e.currentTarget.style.color = "#9ca3af"; }}
+        >
+          📖 出典: {sourceLabel}
+        </a>
+      </p>
+    );
+  };
+
   const renderPostAnswerContent = () => {
     const archiveUrl = raw.archiveUrl as string | undefined;
 
@@ -296,6 +317,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
               <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
               {raw.explanation as string}
             </div>
+            {renderSourceLink()}
             <div className="flex justify-center">
               <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
             </div>
@@ -344,6 +366,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
             >
               出典: {raw.source as string}
             </p>
+            {renderSourceLink()}
             <div className="flex flex-wrap gap-2 justify-center">
               {category === "サカナLOCKS!" && (
                 <OfficialLink href="https://www.tfm.co.jp/lock/sakana/" label="📻 サカナLOCKS!" />

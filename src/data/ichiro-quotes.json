@@ -10,6 +10,8 @@
       "NHKシュガー&シュガー収録中の発言"
     ],
     "source": "雑誌インタビュー",
+    "sourceUrl": "https://www.arupakano.com/entry-yamaguchi-ichiro",
+    "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "medium",
     "explanation": "「音楽が何かを与えてくれる」のではなく、自分が音楽に何をできるかという逆転の発想。ファンの間でも有名な言葉。"
@@ -25,6 +27,8 @@
       "CDジャケットのライナーノーツ"
     ],
     "source": "ライブMC",
+    "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
+    "sourceLabel": "Wikipedia - サカナクション",
     "category": "ライブMC",
     "difficulty": "easy",
     "explanation": "TikTokでも「#お前が行かなきゃ誰が行く」として拡散され、挑戦や決意の場面で広く使われるようになった。"
@@ -40,6 +44,8 @@
       "プラネタリウム企画のナレーション収録時"
     ],
     "source": "withnews カラオケ館インタビュー",
+    "sourceUrl": "https://www.arupakano.com/entry-yamaguchi-ichiro",
+    "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "hard",
     "explanation": "音楽を大衆に届けるためのバランス感覚について、本広監督との対話を引き合いに語った。"
@@ -55,6 +61,8 @@
       "サカナLOCKS!でのリスナーへの回答"
     ],
     "source": "音楽ナタリー インタビュー",
+    "sourceUrl": "https://www.arupakano.com/entry-yamaguchi-ichiro",
+    "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "hard",
     "explanation": "テレビが苦手でありながら、バンドの知名度向上のためにスポークスマンとしてメディア露出を増やしたことを語った。"
@@ -70,6 +78,8 @@
       "NF OFFLINEでの楽器ワークショップ"
     ],
     "source": "TOKYO FM SCHOOL OF LOCK! サカナLOCKS!",
+    "sourceUrl": "https://www.tfm.co.jp/lock/sakana/index.php?itemid=9680&catid=17",
+    "sourceLabel": "サカナLOCKS! バンド部格言",
     "category": "サカナLOCKS!",
     "difficulty": "medium",
     "explanation": "バンド部の顧問として、リスナーからのギターに関する質問に答えた際の格言。"
