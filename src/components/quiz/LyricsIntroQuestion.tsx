@@ -5,9 +5,10 @@ import type { LyricsIntro } from "@/types/quiz";
 
 interface LyricsIntroQuestionProps {
   quiz: LyricsIntro;
+  answered: boolean;
 }
 
-export default function LyricsIntroQuestion({ quiz }: LyricsIntroQuestionProps) {
+export default function LyricsIntroQuestion({ quiz, answered }: LyricsIntroQuestionProps) {
   const [visibleChars, setVisibleChars] = useState(0);
   const chars = Array.from(quiz.lyricsHint);
 
@@ -31,7 +32,7 @@ export default function LyricsIntroQuestion({ quiz }: LyricsIntroQuestionProps) 
         className="text-sm mb-6"
         style={{ color: "var(--text-sub)" }}
       >
-        この歌い出しの曲は？
+        {answered ? "この曲の歌い出しでした" : "この歌い出しの曲は？"}
       </p>
       <p
         className="text-3xl md:text-4xl font-bold tracking-wide"

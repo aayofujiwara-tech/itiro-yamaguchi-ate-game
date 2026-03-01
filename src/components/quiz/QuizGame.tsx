@@ -13,6 +13,7 @@ import CultQuizQuestion from "./CultQuizQuestion";
 import LyricsFillQuestion from "./LyricsFillQuestion";
 import LyricsIntroQuestion from "./LyricsIntroQuestion";
 import QuoteQuestion from "./QuoteQuestion";
+import SpotifyLink from "./SpotifyLink";
 
 import imageData from "@/data/quizzes.json";
 import cultData from "@/data/cult-quiz.json";
@@ -25,7 +26,6 @@ interface QuizItem {
   answer: string;
   options: string[];
   hint?: string;
-  // mode-specific fields carried through as the raw object
   raw: Record<string, unknown>;
 }
 
@@ -190,9 +190,9 @@ export default function QuizGame({ mode }: QuizGameProps) {
   const currentOptions = shuffledOptions[currentIndex] || currentQuiz.options;
   const title = MODE_TITLES[mode];
   const hasHint = mode === "image" && currentQuiz.hint;
+  const raw = currentQuiz.raw;
 
   const renderQuestion = () => {
-    const raw = currentQuiz.raw;
     switch (mode) {
       case "image":
         return (
@@ -211,6 +211,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
               options: raw.options as string[],
               category: raw.category as string,
               difficulty: raw.difficulty as string,
+              explanation: raw.explanation as string,
             }}
           />
         );
@@ -241,6 +242,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
               hintLength: raw.hintLength as number,
               difficulty: raw.difficulty as string,
             }}
+            answered={answered}
           />
         );
       case "quotes":
@@ -254,10 +256,72 @@ export default function QuizGame({ mode }: QuizGameProps) {
               source: raw.source as string,
               category: raw.category as string,
               difficulty: raw.difficulty as string,
+              explanation: raw.explanation as string,
             }}
             answered={answered}
           />
         );
+    }
+  };
+
+  const renderPostAnswerContent = () => {
+    switch (mode) {
+      case "cult":
+        return (
+          <div
+            className="text-sm px-4 py-3 rounded-md animate-fade-in"
+            style={{
+              backgroundColor: "rgba(0, 212, 255, 0.05)",
+              border: "1px solid rgba(0, 212, 255, 0.15)",
+              color: "var(--text-sub)",
+            }}
+          >
+            <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+            {raw.explanation as string}
+          </div>
+        );
+      case "lyrics-fill":
+        return (
+          <div className="text-center animate-fade-in">
+            <SpotifyLink songTitle={raw.songTitle as string} />
+          </div>
+        );
+      case "lyrics-intro":
+        return (
+          <div className="text-center space-y-3 animate-fade-in">
+            <p
+              className="text-xl font-bold"
+              style={{ color: "var(--text-main)" }}
+            >
+              {raw.answer as string}
+            </p>
+            <SpotifyLink songTitle={raw.answer as string} />
+          </div>
+        );
+      case "quotes":
+        return (
+          <div className="space-y-2 animate-fade-in">
+            <div
+              className="text-sm px-4 py-3 rounded-md"
+              style={{
+                backgroundColor: "rgba(0, 212, 255, 0.05)",
+                border: "1px solid rgba(0, 212, 255, 0.15)",
+                color: "var(--text-sub)",
+              }}
+            >
+              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+              {raw.explanation as string}
+            </div>
+            <p
+              className="text-xs text-center"
+              style={{ color: "var(--text-sub)" }}
+            >
+              出典: {raw.source as string}
+            </p>
+          </div>
+        );
+      default:
+        return null;
     }
   };
 
@@ -353,7 +417,9 @@ export default function QuizGame({ mode }: QuizGameProps) {
               correctAnswer={currentQuiz.answer}
               onNext={handleNext}
               isLast={currentIndex + 1 >= quizzes.length}
-            />
+            >
+              {renderPostAnswerContent()}
+            </QuizResult>
           )}
         </div>
       </div>

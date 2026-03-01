@@ -15,6 +15,7 @@ export interface CultQuiz {
   options: string[];
   category: string;
   difficulty: string;
+  explanation: string;
 }
 
 export interface LyricsFill {
@@ -44,6 +45,7 @@ export interface IchiroQuote {
   source: string;
   category: string;
   difficulty: string;
+  explanation: string;
 }
 
 export interface ModeConfig {

@@ -1,72 +1,77 @@
 [
   {
     "id": 1,
-    "quote": "音楽を楽しむ空間で音楽に関わる仕事のことも知ってもらいたい",
-    "answer": "NIGHT FISHINGのコンセプトについて語ったインタビュー",
+    "quote": "音楽の為に何ができるか",
+    "answer": "音楽との向き合い方について語ったインタビュー",
     "options": [
-      "NIGHT FISHINGのコンセプトについて語ったインタビュー",
-      "サカナLOCKS!での授業中",
-      "YouTube配信での雑談",
-      "834.194リリース時の記者会見"
+      "音楽との向き合い方について語ったインタビュー",
+      "サカナLOCKS!での授業中の発言",
+      "NIGHT FISHINGのMCでの発言",
+      "NHKシュガー&シュガー収録中の発言"
     ],
-    "source": "美術手帖インタビュー（2015年）",
+    "source": "雑誌インタビュー",
     "category": "インタビュー",
-    "difficulty": "hard"
+    "difficulty": "medium",
+    "explanation": "「音楽が何かを与えてくれる」のではなく、自分が音楽に何をできるかという逆転の発想。ファンの間でも有名な言葉。"
   },
   {
     "id": 2,
-    "quote": "僕らは変わり続けることで変わらないでいられる",
-    "answer": "アルバム制作について語った音楽雑誌インタビュー",
+    "quote": "俺たちは音楽で行く。でも、お前らが行かなきゃ、誰が行くんだよ",
+    "answer": "ライブMCでの観客への語りかけ",
     "options": [
-      "アルバム制作について語った音楽雑誌インタビュー",
-      "ライブMCでファンに語りかけた場面",
-      "NF OFFLINEでの配信中",
-      "サカナLOCKS!最終回"
+      "ライブMCでの観客への語りかけ",
+      "SCHOOL OF LOCK!での生徒への言葉",
+      "YouTube配信でのファンへのメッセージ",
+      "CDジャケットのライナーノーツ"
     ],
-    "source": "ROCKIN'ON JAPAN インタビュー",
-    "category": "インタビュー",
-    "difficulty": "medium"
+    "source": "ライブMC",
+    "category": "ライブMC",
+    "difficulty": "easy",
+    "explanation": "TikTokでも「#お前が行かなきゃ誰が行く」として拡散され、挑戦や決意の場面で広く使われるようになった。"
   },
   {
     "id": 3,
-    "quote": "夜に釣りをする人は、何かを待っているんじゃなくて、その時間そのものを楽しんでいる",
-    "answer": "NIGHT FISHINGの名前の由来を語った配信",
+    "quote": "美しくて難しいもの、そのバランスに魅力を感じる",
+    "answer": "大衆性と芸術性のバランスについて語ったインタビュー",
     "options": [
-      "NIGHT FISHINGの名前の由来を語った配信",
-      "ラジオ番組でのリスナー相談",
-      "ドキュメンタリー映像のナレーション",
-      "雑誌POPEYEでのエッセイ"
+      "大衆性と芸術性のバランスについて語ったインタビュー",
+      "NF OFFLINEでのトークセッション",
+      "834.194リリース記念の記者会見",
+      "プラネタリウム企画のナレーション収録時"
     ],
-    "source": "YouTube配信（2020年）",
-    "category": "YouTube / Instagram Live配信",
-    "difficulty": "medium"
+    "source": "withnews カラオケ館インタビュー",
+    "category": "インタビュー",
+    "difficulty": "hard",
+    "explanation": "音楽を大衆に届けるためのバランス感覚について、本広監督との対話を引き合いに語った。"
   },
   {
     "id": 4,
-    "quote": "完璧を目指すよりも、まず終わらせることが大事",
-    "answer": "楽曲制作配信で作業しながらの発言",
+    "quote": "テレビに露出するって決めて、戦略的にやってきた",
+    "answer": "sakanactionリリース時の音楽ナタリーインタビュー",
     "options": [
-      "楽曲制作配信で作業しながらの発言",
-      "サカナLOCKS!で生徒に向けた助言",
-      "音楽プロデューサーとの対談",
-      "SAKANAQUARIUMのMC"
+      "sakanactionリリース時の音楽ナタリーインタビュー",
+      "紅白歌合戦出場後のバックステージ取材",
+      "NHKシュガー&シュガーの番組内",
+      "サカナLOCKS!でのリスナーへの回答"
     ],
-    "source": "YouTube楽曲制作配信（2023年）",
-    "category": "YouTube / Instagram Live配信",
-    "difficulty": "hard"
+    "source": "音楽ナタリー インタビュー",
+    "category": "インタビュー",
+    "difficulty": "hard",
+    "explanation": "テレビが苦手でありながら、バンドの知名度向上のためにスポークスマンとしてメディア露出を増やしたことを語った。"
   },
   {
     "id": 5,
-    "quote": "お客さんがいて初めてライブは完成する",
-    "answer": "有観客ライブ再開時のMC",
+    "quote": "アコギからエレキに入るほうが演奏に幅が出る。ドラマチックになる",
+    "answer": "SCHOOL OF LOCK!サカナLOCKS!でのバンド部相談",
     "options": [
-      "有観客ライブ再開時のMC",
-      "NF OFFLINEでの挨拶",
-      "音楽番組でのコメント",
-      "ファンクラブ会報でのメッセージ"
+      "SCHOOL OF LOCK!サカナLOCKS!でのバンド部相談",
+      "ギター専門誌のインタビュー",
+      "YouTube配信での機材紹介コーナー",
+      "NF OFFLINEでの楽器ワークショップ"
     ],
-    "source": "SAKANAQUARIUM（2022年）",
-    "category": "ライブMC",
-    "difficulty": "easy"
+    "source": "TOKYO FM SCHOOL OF LOCK! サカナLOCKS!",
+    "category": "サカナLOCKS!",
+    "difficulty": "medium",
+    "explanation": "バンド部の顧問として、リスナーからのギターに関する質問に答えた際の格言。"
   }
 ]

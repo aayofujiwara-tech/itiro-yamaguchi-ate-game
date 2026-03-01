@@ -5,6 +5,7 @@ interface QuizResultProps {
   correctAnswer: string;
   onNext: () => void;
   isLast: boolean;
+  children?: React.ReactNode;
 }
 
 export default function QuizResult({
@@ -12,6 +13,7 @@ export default function QuizResult({
   correctAnswer,
   onNext,
   isLast,
+  children,
 }: QuizResultProps) {
   return (
     <div className="w-full animate-fade-in">
@@ -37,6 +39,8 @@ export default function QuizResult({
           </p>
         )}
       </div>
+
+      {children && <div className="mb-4">{children}</div>}
 
       <button
         onClick={onNext}

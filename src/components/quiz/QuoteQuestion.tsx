@@ -7,7 +7,7 @@ interface QuoteQuestionProps {
   answered: boolean;
 }
 
-export default function QuoteQuestion({ quiz, answered }: QuoteQuestionProps) {
+export default function QuoteQuestion({ quiz }: QuoteQuestionProps) {
   return (
     <div className="w-full mb-8">
       <p
@@ -17,7 +17,7 @@ export default function QuoteQuestion({ quiz, answered }: QuoteQuestionProps) {
         この発言はどの場面？
       </p>
       <blockquote
-        className="text-lg md:text-xl font-medium leading-relaxed text-center px-4 py-6 rounded-lg mb-4"
+        className="text-lg md:text-xl font-medium leading-relaxed text-center px-4 py-6 rounded-lg"
         style={{
           color: "var(--text-main)",
           backgroundColor: "var(--bg-card)",
@@ -27,14 +27,6 @@ export default function QuoteQuestion({ quiz, answered }: QuoteQuestionProps) {
       >
         &ldquo;{quiz.quote}&rdquo;
       </blockquote>
-      {answered && (
-        <p
-          className="text-xs text-center animate-fade-in"
-          style={{ color: "var(--text-sub)" }}
-        >
-          出典: {quiz.source}
-        </p>
-      )}
     </div>
   );
 }

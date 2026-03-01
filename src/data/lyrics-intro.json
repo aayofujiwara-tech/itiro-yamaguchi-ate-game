@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "lyricsHint": "夜の東側に",
-    "answer": "夜の踊り子",
-    "options": ["夜の踊り子", "ナイトフィッシングイズグッド", "月の椅子", "ネイティブダンサー"],
-    "hintLength": 5,
-    "difficulty": "medium"
-  },
-  {
-    "id": 2,
-    "lyricsHint": "忘れられない",
-    "answer": "忘れられないの",
-    "options": ["忘れられないの", "グッドバイ", "ルーキー", "マイノリティ"],
-    "hintLength": 6,
-    "difficulty": "easy"
-  },
-  {
-    "id": 3,
-    "lyricsHint": "変わり続ける",
-    "answer": "アイデンティティ",
-    "options": ["アイデンティティ", "ミュージック", "三日月サンセット", "セプテンバー"],
-    "hintLength": 6,
-    "difficulty": "medium"
-  },
-  {
-    "id": 4,
-    "lyricsHint": "海の街を",
-    "answer": "新宝島",
-    "options": ["新宝島", "サンプル", "アルクアラウンド", "Aoi"],
-    "hintLength": 4,
+    "lyricsHint": "夕焼けが急いだ",
+    "answer": "M",
+    "options": ["M", "三日月サンセット", "白波トップウォーター", "さよならはエモーション"],
+    "hintLength": 7,
     "difficulty": "hard"
   },
   {
+    "id": 2,
+    "lyricsHint": "何度でも",
+    "answer": "怪獣",
+    "options": ["怪獣", "アルクアラウンド", "ミュージック", "アイデンティティ"],
+    "hintLength": 4,
+    "difficulty": "medium"
+  },
+  {
+    "id": 3,
+    "lyricsHint": "忘れられないの",
+    "answer": "忘れられないの",
+    "options": ["忘れられないの", "ナイトフィッシングイズグッド", "グッドバイ", "蓮の花"],
+    "hintLength": 7,
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "lyricsHint": "乗りこなす",
+    "answer": "新宝島",
+    "options": ["新宝島", "多分、風。", "ネイティブダンサー", "アルクアラウンド"],
+    "hintLength": 5,
+    "difficulty": "easy"
+  },
+  {
     "id": 5,
-    "lyricsHint": "白い部屋の中",
-    "answer": "ミュージック",
-    "options": ["ミュージック", "目が明く藍色", "ネプトゥーヌス", "スローモーション"],
-    "hintLength": 6,
+    "lyricsHint": "点と線の",
+    "answer": "ナイトフィッシングイズグッド",
+    "options": ["ナイトフィッシングイズグッド", "バッハの旋律を夜に聴いたせいです。", "目が明く藍色", "セントレイ"],
+    "hintLength": 4,
     "difficulty": "hard"
   }
 ]

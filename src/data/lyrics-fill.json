@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "songTitle": "アルクアラウンド",
-    "lyricBefore": "僕が歩いてく道の",
-    "blank": "その先",
-    "lyricAfter": "にある光を",
-    "options": ["その先", "向こう", "果て", "手前"],
+    "songTitle": "新宝島",
+    "lyricBefore": "走り出す",
+    "blank": "新しい",
+    "lyricAfter": "朝が来た",
+    "options": ["新しい", "輝く", "眩しい", "遥かな"],
     "difficulty": "easy"
   },
   {
     "id": 2,
-    "songTitle": "新宝島",
-    "lyricBefore": "走り出す街の中",
-    "blank": "探している",
-    "lyricAfter": "何かを感じて",
-    "options": ["探している", "振り返る", "追いかけた", "見つめてた"],
+    "songTitle": "アルクアラウンド",
+    "lyricBefore": "僕が歩く",
+    "blank": "この道は",
+    "lyricAfter": "続いてる",
+    "options": ["この道は", "あの空は", "その先は", "夜の中"],
     "difficulty": "easy"
   },
   {
     "id": 3,
-    "songTitle": "ミュージック",
-    "lyricBefore": "夜が明けるまで",
-    "blank": "踊ろう",
-    "lyricAfter": "二人の音に合わせ",
-    "options": ["踊ろう", "歌おう", "走ろう", "笑おう"],
+    "songTitle": "夜の踊り子",
+    "lyricBefore": "夜の",
+    "blank": "東側に",
+    "lyricAfter": "踊り子がいた",
+    "options": ["東側に", "向こうに", "入口に", "片隅に"],
     "difficulty": "medium"
   },
   {
     "id": 4,
-    "songTitle": "アイデンティティ",
-    "lyricBefore": "何者でもない",
-    "blank": "僕らが",
-    "lyricAfter": "ここにいる意味",
-    "options": ["僕らが", "君たち", "彼らが", "誰もが"],
+    "songTitle": "ミュージック",
+    "lyricBefore": "ベイビー",
+    "blank": "僕の",
+    "lyricAfter": "ミュージック",
+    "options": ["僕の", "夜の", "君の", "愛の"],
     "difficulty": "medium"
   },
   {
     "id": 5,
-    "songTitle": "夜の踊り子",
-    "lyricBefore": "月の光が照らす",
-    "blank": "影を",
-    "lyricAfter": "踏みながら",
-    "options": ["影を", "道を", "夢を", "街を"],
+    "songTitle": "アイデンティティ",
+    "lyricBefore": "",
+    "blank": "何を持って",
+    "lyricAfter": "僕と思う",
+    "options": ["何を持って", "誰が見ても", "いつまでも", "どこにいても"],
     "difficulty": "hard"
   }
 ]
