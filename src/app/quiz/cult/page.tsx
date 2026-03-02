@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import QuizGame from "@/components/quiz/QuizGame";
 
 export const metadata: Metadata = {
-  title: "カルトクイズ | サカナクション検定",
+  title: "カルトクイズ | NF Depth",
   description: "サカナクションに関するマニアック知識を試すクイズ。",
 };
 

@@ -27,9 +27,9 @@ const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> 
 };
 
 const DIFFICULTY_LABELS: Record<RandomDifficulty, string> = {
-  easy: "初級",
-  medium: "中級",
-  hard: "上級",
+  easy: "浅瀬",
+  medium: "中層",
+  hard: "深海",
 };
 
 const MAX_QUESTIONS = 10;
@@ -371,7 +371,7 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
                 className="text-lg md:text-xl font-bold"
                 style={{ color: "var(--text-main)" }}
               >
-                🎲 サカナクション検定（{DIFFICULTY_LABELS[difficulty]}）
+                🎲 深海探査（{DIFFICULTY_LABELS[difficulty]}）
               </h1>
             </div>
             <div

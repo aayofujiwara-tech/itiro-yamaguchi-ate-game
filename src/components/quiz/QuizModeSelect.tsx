@@ -12,21 +12,21 @@ import quotesData from "@/data/ichiro-quotes.json";
 const randomModes = [
   {
     key: "easy",
-    title: "サカナクション検定（初級）",
+    title: "深海探査（浅瀬）",
     icon: "🎲",
     description: "easy問題からランダム10問",
     path: "/quiz/random/easy",
   },
   {
     key: "medium",
-    title: "サカナクション検定（中級）",
+    title: "深海探査（中層）",
     icon: "🎲",
     description: "medium問題からランダム10問",
     path: "/quiz/random/medium",
   },
   {
     key: "hard",
-    title: "サカナクション検定（上級）",
+    title: "深海探査（深海）",
     icon: "🎲",
     description: "hard問題からランダム10問",
     path: "/quiz/random/hard",
@@ -89,21 +89,21 @@ export default function QuizModeSelect() {
             className="text-3xl md:text-4xl font-bold mb-3"
             style={{ color: "var(--text-main)" }}
           >
-            🐟 サカナクション検定
+            🐟 NF Depth — 深海探査レベル測定
           </h1>
           <p className="text-base" style={{ color: "var(--text-sub)" }}>
-            あなたのサカナクション偏差値は？
+            あなたの深海探査レベルは？
           </p>
         </div>
 
-        {/* 検定モード */}
+        {/* 深海探査 */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <h2
               className="text-sm font-bold tracking-wider"
               style={{ color: "var(--accent)" }}
             >
-              検定モード
+              深海探査
             </h2>
             <div
               className="flex-1 h-px"

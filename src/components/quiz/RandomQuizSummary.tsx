@@ -12,9 +12,9 @@ const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> 
 };
 
 const DIFFICULTY_LABELS: Record<RandomDifficulty, string> = {
-  easy: "初級",
-  medium: "中級",
-  hard: "上級",
+  easy: "浅瀬",
+  medium: "中層",
+  hard: "深海",
 };
 
 interface RandomQuizSummaryProps {
@@ -62,7 +62,7 @@ export default function RandomQuizSummary({
             className="text-3xl font-bold mb-8"
             style={{ color: "var(--text-main)" }}
           >
-            🎲 検定結果（{DIFFICULTY_LABELS[difficulty]}）
+            🎲 探査結果（{DIFFICULTY_LABELS[difficulty]}）
           </h2>
 
           <div
@@ -113,7 +113,7 @@ export default function RandomQuizSummary({
               className="text-sm mb-2"
               style={{ color: "var(--text-sub)" }}
             >
-              あなたのサカナクション偏差値
+              あなたの深海探査レベル
             </p>
             <div
               className="text-5xl font-bold"
