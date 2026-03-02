@@ -3,8 +3,8 @@ import Link from "next/link";
 import Footer from "@/components/quiz/Footer";
 
 export const metadata: Metadata = {
-  title: "免責事項 | NF Depth",
-  description: "NF Depth — 深海探査レベル測定の免責事項ページです。",
+  title: "免責事項 | 深海探査レベル測定",
+  description: "深海探査レベル測定の免責事項ページです。",
 };
 
 export default function DisclaimerPage() {
@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
             className="text-2xl md:text-3xl font-bold mb-10"
             style={{ color: "var(--text-main)" }}
           >
-            NF Depth — 免責事項
+            深海探査レベル測定 — 免責事項
           </h1>
 
           <section className="mb-8">
@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
               style={{ color: "#d1d5db" }}
             >
               <p>
-                本サイト「NF Depth — 深海探査レベル測定」は、ファンが個人で制作した非公式・非営利のクイズゲームです。
+                本サイト「深海探査レベル測定」は、ファンが個人で制作した非公式・非営利のクイズゲームです。
               </p>
               <p>以下の団体・企業とは一切の関係がありません:</p>
               <ul className="list-disc list-inside pl-2 space-y-1" style={{ color: "var(--text-sub)" }}>

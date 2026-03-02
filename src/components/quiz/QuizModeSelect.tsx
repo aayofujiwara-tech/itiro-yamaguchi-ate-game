@@ -89,14 +89,8 @@ export default function QuizModeSelect() {
             className="text-3xl sm:text-4xl font-bold mb-1"
             style={{ color: "var(--text-main)" }}
           >
-            🐟 NF Depth
+            🐟 深海探査レベル測定
           </h1>
-          <p
-            className="text-lg sm:text-xl mb-3"
-            style={{ color: "#9ca3af" }}
-          >
-            深海探査レベル測定
-          </p>
           <p className="text-base" style={{ color: "var(--text-sub)" }}>
             あなたの深海探査レベルは？
           </p>

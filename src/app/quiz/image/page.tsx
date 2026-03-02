@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import QuizGame from "@/components/quiz/QuizGame";
 
 export const metadata: Metadata = {
-  title: "配信画像当て | NF Depth",
+  title: "配信画像当て | 深海探査レベル測定",
   description: "配信画像を見て、どの配信回のものかを当てるクイズ。",
 };
 

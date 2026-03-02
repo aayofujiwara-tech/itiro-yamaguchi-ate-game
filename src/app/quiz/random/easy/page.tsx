@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RandomQuizGame from "@/components/quiz/RandomQuizGame";
 
 export const metadata: Metadata = {
-  title: "深海探査（浅瀬）| NF Depth",
+  title: "深海探査（浅瀬）| 深海探査レベル測定",
   description: "浅瀬エリアからランダム10問に挑戦しよう。",
 };
 

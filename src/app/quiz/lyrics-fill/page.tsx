@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import QuizGame from "@/components/quiz/QuizGame";
 
 export const metadata: Metadata = {
-  title: "歌詞穴埋め | NF Depth",
+  title: "歌詞穴埋め | 深海探査レベル測定",
   description: "サカナクションの歌詞の空欄を埋めるクイズ。",
 };
 

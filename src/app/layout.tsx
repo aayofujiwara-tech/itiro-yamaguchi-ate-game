@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NF Depth — 深海探査レベル測定",
+  title: "深海探査レベル測定",
   description: "あなたの深海探査レベルは？ 5つのクイズモードに挑戦しよう。",
 };
 
