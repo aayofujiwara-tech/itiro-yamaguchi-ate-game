@@ -14,7 +14,8 @@
     "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "medium",
-    "explanation": "「音楽が何かを与えてくれる」のではなく、自分が音楽に何をできるかという逆転の発想。ファンの間でも有名な言葉。"
+    "explanation": "「音楽が何かを与えてくれる」のではなく、自分が音楽に何をできるかという逆転の発想。ファンの間でも有名な言葉。",
+    "relatedSong": null
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "sourceLabel": "Wikipedia - サカナクション",
     "category": "ライブMC",
     "difficulty": "easy",
-    "explanation": "TikTokでも「#お前が行かなきゃ誰が行く」として拡散され、挑戦や決意の場面で広く使われるようになった。"
+    "explanation": "TikTokでも「#お前が行かなきゃ誰が行く」として拡散され、挑戦や決意の場面で広く使われるようになった。",
+    "relatedSong": null
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
     "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "hard",
-    "explanation": "音楽を大衆に届けるためのバランス感覚について、本広監督との対話を引き合いに語った。"
+    "explanation": "音楽を大衆に届けるためのバランス感覚について、本広監督との対話を引き合いに語った。",
+    "relatedSong": null
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "sourceLabel": "山口一郎の考え インタビューまとめ",
     "category": "インタビュー",
     "difficulty": "hard",
-    "explanation": "テレビが苦手でありながら、バンドの知名度向上のためにスポークスマンとしてメディア露出を増やしたことを語った。"
+    "explanation": "テレビが苦手でありながら、バンドの知名度向上のためにスポークスマンとしてメディア露出を増やしたことを語った。",
+    "relatedSong": null
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
     "sourceLabel": "サカナLOCKS! バンド部格言",
     "category": "サカナLOCKS!",
     "difficulty": "medium",
-    "explanation": "バンド部の顧問として、リスナーからのギターに関する質問に答えた際の格言。"
+    "explanation": "バンド部の顧問として、リスナーからのギターに関する質問に答えた際の格言。",
+    "relatedSong": null
   },
   {
     "id": 6,
@@ -99,7 +104,8 @@
     "sourceLabel": "rockin'on 834.194 インタビュー",
     "category": "インタビュー",
     "difficulty": "hard",
-    "explanation": "ユーミンに「ポップス作りたい」と話したところ返ってきた言葉。5年後に評価されるものが本当のポップスだという感覚に、山口は確信を得た。"
+    "explanation": "ユーミンに「ポップス作りたい」と話したところ返ってきた言葉。5年後に評価されるものが本当のポップスだという感覚に、山口は確信を得た。",
+    "relatedSong": null
   },
   {
     "id": 7,
@@ -116,7 +122,8 @@
     "sourceLabel": "rockin'on 834.194 インタビュー",
     "category": "インタビュー",
     "difficulty": "medium",
-    "explanation": "sakanaction後にセールス目標を達成しながらも、本来の目的との乖離を感じ、外に向かった露出活動に限界を感じたと語った。"
+    "explanation": "sakanaction後にセールス目標を達成しながらも、本来の目的との乖離を感じ、外に向かった露出活動に限界を感じたと語った。",
+    "relatedSong": null
   },
   {
     "id": 8,
@@ -133,7 +140,8 @@
     "sourceLabel": "サカナLOCKS! 834.194振り返り",
     "category": "サカナLOCKS!",
     "difficulty": "hard",
-    "explanation": "「エンドレス」の制作に9ヶ月かかった経験から、潜れば必ず自分の音楽にたどり着けるという確信を得たと語った。"
+    "explanation": "「エンドレス」の制作に9ヶ月かかった経験から、潜れば必ず自分の音楽にたどり着けるという確信を得たと語った。",
+    "relatedSong": "エンドレス"
   },
   {
     "id": 9,
@@ -150,7 +158,8 @@
     "sourceLabel": "山口一郎 名語録・名言集",
     "category": "インタビュー",
     "difficulty": "medium",
-    "explanation": "音楽の現場での自由な楽しみ方を肯定する、山口の音楽観を象徴する言葉。"
+    "explanation": "音楽の現場での自由な楽しみ方を肯定する、山口の音楽観を象徴する言葉。",
+    "relatedSong": null
   },
   {
     "id": 10,
@@ -167,6 +176,7 @@
     "sourceLabel": "山口一郎 名語録・名言集",
     "category": "インタビュー",
     "difficulty": "medium",
-    "explanation": "NF（NIGHT FISHING）の活動コンセプトにも通じる、音楽と他のカルチャーの関係性についての信念。"
+    "explanation": "NF（NIGHT FISHING）の活動コンセプトにも通じる、音楽と他のカルチャーの関係性についての信念。",
+    "relatedSong": null
   }
 ]

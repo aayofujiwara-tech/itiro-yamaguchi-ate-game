@@ -292,6 +292,8 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
   };
 
   const renderPostAnswerContent = () => {
+    const relatedSong = raw.relatedSong as string | null | undefined;
+
     switch (currentQuiz.quizType) {
       case "cult":
         return (
@@ -307,6 +309,11 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
               <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
               {raw.explanation as string}
             </div>
+            {relatedSong && (
+              <div className="flex justify-center">
+                <SpotifyLink songTitle={relatedSong} />
+              </div>
+            )}
             {renderSourceLink()}
           </div>
         );
@@ -344,6 +351,11 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
               <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
               {raw.explanation as string}
             </div>
+            {relatedSong && (
+              <div className="flex justify-center">
+                <SpotifyLink songTitle={relatedSong} />
+              </div>
+            )}
             <p
               className="text-xs text-center"
               style={{ color: "var(--text-sub)" }}

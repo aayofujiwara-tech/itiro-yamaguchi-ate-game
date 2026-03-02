@@ -292,15 +292,25 @@ export default function QuizGame({ mode }: QuizGameProps) {
 
   const renderPostAnswerContent = () => {
     const archiveUrl = raw.archiveUrl as string | undefined;
+    const relatedSong = raw.relatedSong as string | null | undefined;
 
     switch (mode) {
       case "image":
         return (
-          <div className="flex flex-wrap gap-2 justify-center animate-fade-in">
+          <div className="space-y-3 animate-fade-in">
             {archiveUrl && (
-              <OfficialLink href={archiveUrl} label="📺 この配信を観る" />
+              <div className="flex justify-center">
+                <OfficialLink href={archiveUrl} label="📺 この配信を観る" />
+              </div>
             )}
-            <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+            {relatedSong && (
+              <div className="flex justify-center">
+                <SpotifyLink songTitle={relatedSong} />
+              </div>
+            )}
+            <div className="flex justify-center">
+              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+            </div>
           </div>
         );
       case "cult":
@@ -317,6 +327,11 @@ export default function QuizGame({ mode }: QuizGameProps) {
               <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
               {raw.explanation as string}
             </div>
+            {relatedSong && (
+              <div className="flex justify-center">
+                <SpotifyLink songTitle={relatedSong} />
+              </div>
+            )}
             {renderSourceLink()}
             <div className="flex justify-center">
               <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
@@ -360,6 +375,11 @@ export default function QuizGame({ mode }: QuizGameProps) {
               <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
               {raw.explanation as string}
             </div>
+            {relatedSong && (
+              <div className="flex justify-center">
+                <SpotifyLink songTitle={relatedSong} />
+              </div>
+            )}
             <p
               className="text-xs text-center"
               style={{ color: "var(--text-sub)" }}
