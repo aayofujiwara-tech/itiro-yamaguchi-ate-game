@@ -51,11 +51,17 @@ export default function PasswordGate({ children }: PasswordGateProps) {
       <div className="w-full max-w-sm animate-fade-in">
         <div className="text-center mb-8">
           <h1
-            className="text-2xl md:text-3xl font-bold mb-3"
+            className="text-3xl sm:text-4xl font-bold mb-1"
             style={{ color: "var(--text-main)" }}
           >
-            🐟 NF Depth — 深海探査レベル測定
+            🐟 NF Depth
           </h1>
+          <p
+            className="text-lg sm:text-xl mb-3"
+            style={{ color: "#9ca3af" }}
+          >
+            深海探査レベル測定
+          </p>
           <p className="text-sm" style={{ color: "var(--text-sub)" }}>
             参加にはパスワードが必要です
           </p>
