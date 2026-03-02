@@ -12,23 +12,23 @@ import quotesData from "@/data/ichiro-quotes.json";
 const randomModes = [
   {
     key: "easy",
-    title: "深海探査（浅瀬）",
+    title: "深海探査（表層：マイワシ級）",
     icon: "🎲",
-    description: "浅瀬エリアからランダム10問",
+    description: "表層からランダム10問",
     path: "/quiz/random/easy",
   },
   {
     key: "medium",
-    title: "深海探査（中層）",
+    title: "深海探査（漸深層：ダイオウイカ級）",
     icon: "🎲",
-    description: "中層エリアからランダム10問",
+    description: "漸深層からランダム10問",
     path: "/quiz/random/medium",
   },
   {
     key: "hard",
-    title: "深海探査（深海）",
+    title: "深海探査（深海層：シンカイクサウオ級）",
     icon: "🎲",
-    description: "深海エリアからランダム10問",
+    description: "深海層からランダム10問",
     path: "/quiz/random/hard",
   },
 ];

@@ -12,9 +12,9 @@ const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> 
 };
 
 const DIFFICULTY_LABELS: Record<RandomDifficulty, string> = {
-  easy: "浅瀬",
-  medium: "中層",
-  hard: "深海",
+  easy: "表層：マイワシ級",
+  medium: "漸深層：ダイオウイカ級",
+  hard: "深海層：シンカイクサウオ級",
 };
 
 interface RandomQuizSummaryProps {
