@@ -78,24 +78,10 @@ export default function PasswordGate({ children }: PasswordGateProps) {
               }}
               placeholder="パスワードを入力"
               autoFocus
-              className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all duration-200"
+              className={`w-full px-4 py-3 rounded-lg text-sm${error ? " border-error" : ""}`}
               style={{
                 backgroundColor: "var(--bg-card)",
-                border: `1px solid ${error ? "var(--incorrect)" : "var(--border)"}`,
                 color: "var(--text-main)",
-              }}
-              onFocus={(e) => {
-                if (!error) {
-                  e.currentTarget.style.borderColor = "var(--accent)";
-                  e.currentTarget.style.boxShadow =
-                    "0 0 8px rgba(0, 212, 255, 0.15)";
-                }
-              }}
-              onBlur={(e) => {
-                if (!error) {
-                  e.currentTarget.style.borderColor = "var(--border)";
-                  e.currentTarget.style.boxShadow = "none";
-                }
               }}
             />
           </div>

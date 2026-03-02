@@ -30,6 +30,23 @@ h1, h2, h3, h4, h5, h6, p, span, div:not(input):not(textarea) {
 
 input, textarea {
   caret-color: auto;
+  outline: none;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+}
+
+input.border-error {
+  border-color: var(--incorrect);
+}
+
+input.border-error:focus {
+  border-color: var(--incorrect);
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.15);
 }
 
 @keyframes pulse-correct {
