@@ -39,6 +39,14 @@ const MODE_TITLES: Record<QuizMode, string> = {
   quotes: "一郎語録当て",
 };
 
+const MODE_ICONS: Record<QuizMode, string> = {
+  image: "🖼️",
+  cult: "🧠",
+  "lyrics-fill": "📝",
+  "lyrics-intro": "🎵",
+  quotes: "💬",
+};
+
 function loadQuizItems(mode: QuizMode): QuizItem[] {
   switch (mode) {
     case "image":
@@ -89,11 +97,19 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
+function getQuestionCountOptions(total: number): number[] {
+  const options = [5, 10, 15, 20].filter((n) => n < total);
+  options.push(total);
+  return [...new Set(options)];
+}
+
 interface QuizGameProps {
   mode: QuizMode;
 }
 
 export default function QuizGame({ mode }: QuizGameProps) {
+  const [allItems] = useState<QuizItem[]>(() => loadQuizItems(mode));
+  const [questionCount, setQuestionCount] = useState<number | null>(null);
   const [quizzes, setQuizzes] = useState<QuizItem[]>([]);
   const [shuffledOptions, setShuffledOptions] = useState<string[][]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,27 +123,57 @@ export default function QuizGame({ mode }: QuizGameProps) {
   const [finished, setFinished] = useState(false);
   const [fadeKey, setFadeKey] = useState(0);
 
-  const initializeGame = useCallback(() => {
-    const items = loadQuizItems(mode);
-    const shuffledItems = shuffleArray(items);
-    const options = shuffledItems.map((q) => shuffleArray(q.options));
-    setQuizzes(shuffledItems);
-    setShuffledOptions(options);
-    setCurrentIndex(0);
-    setScore(0);
-    setHintUsedCount(0);
-    setAnswered(false);
-    setSelectedOption(null);
-    setIsCorrect(null);
-    setHintUsed(false);
-    setShowHint(false);
-    setFinished(false);
-    setFadeKey((k) => k + 1);
-  }, [mode]);
+  const totalQuestions = allItems.length;
 
+  // Auto-skip selection if 5 or fewer questions
   useEffect(() => {
-    initializeGame();
-  }, [initializeGame]);
+    if (totalQuestions <= 5) {
+      setQuestionCount(totalQuestions);
+    }
+  }, [totalQuestions]);
+
+  const startGame = useCallback(
+    (count: number) => {
+      const shuffledItems = shuffleArray(allItems).slice(0, count);
+      const options = shuffledItems.map((q) => shuffleArray(q.options));
+      setQuizzes(shuffledItems);
+      setShuffledOptions(options);
+      setCurrentIndex(0);
+      setScore(0);
+      setHintUsedCount(0);
+      setAnswered(false);
+      setSelectedOption(null);
+      setIsCorrect(null);
+      setHintUsed(false);
+      setShowHint(false);
+      setFinished(false);
+      setFadeKey((k) => k + 1);
+    },
+    [allItems],
+  );
+
+  // Start game when questionCount is set
+  useEffect(() => {
+    if (questionCount !== null) {
+      startGame(questionCount);
+    }
+  }, [questionCount, startGame]);
+
+  const initializeGame = useCallback(() => {
+    if (questionCount !== null) {
+      startGame(questionCount);
+    }
+  }, [questionCount, startGame]);
+
+  const handleSelectCount = (count: number) => {
+    setQuestionCount(count);
+  };
+
+  const handleBackToSelect = () => {
+    setQuestionCount(null);
+    setQuizzes([]);
+    setFinished(false);
+  };
 
   const handleSelect = (option: string) => {
     if (answered) return;
@@ -161,6 +207,84 @@ export default function QuizGame({ mode }: QuizGameProps) {
     setFadeKey((k) => k + 1);
   };
 
+  const title = MODE_TITLES[mode];
+  const icon = MODE_ICONS[mode];
+
+  // Question count selection screen
+  if (questionCount === null) {
+    const countOptions = getQuestionCountOptions(totalQuestions);
+    return (
+      <PasswordGate>
+        <div
+          className="min-h-screen flex flex-col"
+          style={{ backgroundColor: "var(--bg-primary)" }}
+        >
+          <div className="flex-1 flex flex-col items-center justify-center px-4">
+            <div className="w-full max-w-md text-center animate-fade-in">
+              <div className="text-4xl mb-4">{icon}</div>
+              <h1
+                className="text-2xl md:text-3xl font-bold mb-3"
+                style={{ color: "var(--text-main)" }}
+              >
+                {title}
+              </h1>
+              <p
+                className="text-base mb-8"
+                style={{ color: "var(--text-sub)" }}
+              >
+                全{totalQuestions}問中、何問挑戦する？
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center mb-8">
+                {countOptions.map((count, idx) => {
+                  const isAll = idx === countOptions.length - 1;
+                  const label = isAll ? `全${count}問` : `${count}問`;
+                  return (
+                    <button
+                      key={count}
+                      onClick={() => handleSelectCount(count)}
+                      className="px-6 py-4 rounded-xl text-base font-medium transition-all duration-200 cursor-pointer"
+                      style={{
+                        backgroundColor: "var(--bg-card)",
+                        color: "var(--text-main)",
+                        border: "1px solid var(--border)",
+                        minWidth: "100px",
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.borderColor = "var(--accent)";
+                        e.currentTarget.style.boxShadow =
+                          "0 0 12px rgba(0, 212, 255, 0.2)";
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.borderColor = "var(--border)";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+              <Link
+                href="/"
+                className="text-sm transition-colors duration-200"
+                style={{ color: "var(--text-sub)" }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.color = "var(--accent)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.color = "var(--text-sub)";
+                }}
+              >
+                ← モード選択に戻る
+              </Link>
+            </div>
+          </div>
+          <Footer />
+        </div>
+      </PasswordGate>
+    );
+  }
+
   if (quizzes.length === 0) {
     return (
       <PasswordGate>
@@ -186,6 +310,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
           hintUsedCount={hintUsedCount}
           onRestart={initializeGame}
           backHref="/"
+          onBackToSelect={totalQuestions > 5 ? handleBackToSelect : undefined}
         />
       </PasswordGate>
     );
@@ -193,7 +318,6 @@ export default function QuizGame({ mode }: QuizGameProps) {
 
   const currentQuiz = quizzes[currentIndex];
   const currentOptions = shuffledOptions[currentIndex] || currentQuiz.options;
-  const title = MODE_TITLES[mode];
   const hasHint = mode === "image" && currentQuiz.hint;
   const raw = currentQuiz.raw;
 

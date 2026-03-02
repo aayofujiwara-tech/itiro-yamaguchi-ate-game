@@ -9,6 +9,7 @@ interface QuizSummaryProps {
   hintUsedCount: number;
   onRestart: () => void;
   backHref?: string;
+  onBackToSelect?: () => void;
 }
 
 export default function QuizSummary({
@@ -17,6 +18,7 @@ export default function QuizSummary({
   hintUsedCount,
   onRestart,
   backHref,
+  onBackToSelect,
 }: QuizSummaryProps) {
   const percentage = Math.round((score / total) * 100);
 
@@ -113,6 +115,28 @@ export default function QuizSummary({
             >
               もう一度挑戦する
             </button>
+
+            {onBackToSelect && (
+              <button
+                onClick={onBackToSelect}
+                className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+                style={{
+                  backgroundColor: "transparent",
+                  color: "var(--text-sub)",
+                  border: "1px solid var(--border)",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.color = "var(--text-main)";
+                  e.currentTarget.style.borderColor = "var(--text-sub)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.color = "var(--text-sub)";
+                  e.currentTarget.style.borderColor = "var(--border)";
+                }}
+              >
+                出題数を変更する
+              </button>
+            )}
 
             {backHref && (
               <Link
