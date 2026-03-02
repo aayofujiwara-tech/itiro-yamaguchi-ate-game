@@ -3,7 +3,7 @@ import RandomQuizGame from "@/components/quiz/RandomQuizGame";
 
 export const metadata: Metadata = {
   title: "深海探査（深海）| NF Depth",
-  description: "hard問題からランダム10問に挑戦しよう。",
+  description: "深海エリアからランダム10問に挑戦しよう。",
 };
 
 export default function RandomHardPage() {
