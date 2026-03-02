@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { RandomQuizType, RandomDifficulty, CategoryScore } from "@/types/quiz";
 import Footer from "./Footer";
+import RankShareCard from "./RankShareCard";
 
 const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> = {
   cult: { icon: "🧠", label: "カルトクイズ" },
@@ -33,7 +34,6 @@ export default function RandomQuizSummary({
   onRestart,
 }: RandomQuizSummaryProps) {
   const percentage = total > 0 ? score / total : 0;
-  const hensachi = Math.floor(25 + percentage * 50);
 
   const getMessage = () => {
     const pct = Math.round(percentage * 100);
@@ -101,30 +101,7 @@ export default function RandomQuizSummary({
             </p>
           </div>
 
-          {/* 偏差値 */}
-          <div
-            className="rounded-xl p-6 mb-6"
-            style={{
-              backgroundColor: "var(--bg-card)",
-              border: "1px solid var(--border)",
-            }}
-          >
-            <p
-              className="text-sm mb-2"
-              style={{ color: "var(--text-sub)" }}
-            >
-              あなたの深海探査レベル
-            </p>
-            <div
-              className="text-5xl font-bold"
-              style={{
-                color: "var(--accent)",
-                fontFamily: "Inter, monospace",
-              }}
-            >
-              {hensachi}
-            </div>
-          </div>
+          <RankShareCard scorePercent={Math.round(percentage * 100)} />
 
           {/* カテゴリ別成績 */}
           <div

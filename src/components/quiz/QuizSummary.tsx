@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Footer from "./Footer";
+import RankShareCard from "./RankShareCard";
 
 interface QuizSummaryProps {
   score: number;
@@ -93,6 +94,8 @@ export default function QuizSummary({
               {getMessage()}
             </p>
           </div>
+
+          <RankShareCard scorePercent={percentage} />
 
           <div className="space-y-3">
             <button
