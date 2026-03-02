@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imageId": "sakanaction-quiz/stream_20251209",
+    "imageId": "stream_20251209",
     "answer": "2025/12/9 今夜も雑談中（チャンネル3周年）",
     "hint": "チャンネルの節目を祝った配信",
     "options": [
@@ -21,7 +21,7 @@
   },
   {
     "id": 2,
-    "imageId": "sakanaction-quiz/stream_20250907",
+    "imageId": "stream_20250907",
     "answer": "2025/9/7 感謝感謝の誕生日カウントダウン配信",
     "hint": "深夜0時をまたいだ特別な配信",
     "options": [
@@ -41,7 +41,7 @@
   },
   {
     "id": 3,
-    "imageId": "sakanaction-quiz/stream_20250929",
+    "imageId": "stream_20250929",
     "answer": "2025/9/29 祝！リリース10周年記念！新宝島祭！歌唱配信",
     "hint": "ある楽曲の記念日に歌った配信",
     "options": [
@@ -61,7 +61,7 @@
   },
   {
     "id": 4,
-    "imageId": "sakanaction-quiz/stream_20251229",
+    "imageId": "stream_20251229",
     "answer": "2025/12/29 今夜も雑談中（ライブ納め！あとは紅白だけ！）",
     "hint": "年末のフェス帰りに配信した回",
     "options": [
@@ -81,7 +81,7 @@
   },
   {
     "id": 5,
-    "imageId": "sakanaction-quiz/stream_20260210",
+    "imageId": "stream_20260210",
     "answer": "2026/2/10 「いらない」リリース記念！フル尺＆生歌初披露配信",
     "hint": "新曲のリリース日に特別な配信をした回",
     "options": [
@@ -101,7 +101,7 @@
   },
   {
     "id": 6,
-    "imageId": "sakanaction-quiz/stream_20241108",
+    "imageId": "stream_20241108",
     "answer": "2024/11/8 今夜も雑談中（SAKANAQUARIUM 2024 turn 映画公開告知）",
     "hint": "映画館での公開が発表された配信",
     "options": [
@@ -121,7 +121,7 @@
   },
   {
     "id": 7,
-    "imageId": "sakanaction-quiz/stream_20251115",
+    "imageId": "stream_20251115",
     "answer": "2025/11/15 今夜も雑談中（小樽の母校で講演した話）",
     "hint": "故郷での活動を語った配信",
     "options": [
@@ -141,7 +141,7 @@
   },
   {
     "id": 8,
-    "imageId": "sakanaction-quiz/stream_20250716",
+    "imageId": "stream_20250716",
     "answer": "2025/7/16 今夜も配信中（30歳まで梅雨を知らなかった話）",
     "hint": "北海道出身ならではのエピソードが出た配信",
     "options": [
@@ -161,7 +161,7 @@
   },
   {
     "id": 9,
-    "imageId": "sakanaction-quiz/stream_20250927",
+    "imageId": "stream_20250927",
     "answer": "2025/9/27 今夜も雑談中（タローマン万博大爆発の舞台挨拶話）",
     "hint": "映画の舞台挨拶を3回もやった話をした配信",
     "options": [
@@ -181,7 +181,7 @@
   },
   {
     "id": 10,
-    "imageId": "sakanaction-quiz/stream_20251231",
+    "imageId": "stream_20251231",
     "answer": "2025/12/31 大晦日だよ！全員集合！！さよならっきょ2025の向こう側へ歌唱配信SP",
     "hint": "年末に歌唱スペシャルとして配信された回",
     "options": [
