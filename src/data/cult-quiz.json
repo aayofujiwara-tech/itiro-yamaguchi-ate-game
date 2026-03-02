@@ -9,7 +9,8 @@
     "explanation": "1998年に札幌第一高等学校の同級生で結成。2000年に「ダッチマン」に改称した。",
     "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
     "sourceLabel": "Wikipedia - サカナクション",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "explanation": "ベース・コーラス担当の草刈愛美は東京都出身。愛称は「姐さん」。",
     "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
     "sourceLabel": "Wikipedia - サカナクション",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "explanation": "2015年7月3日、アートやカルチャーと音楽の新しい楽しみ方を提案するイベントとして初開催された。",
     "sourceUrl": "https://spincoaster.com/sakanaction-night-fishing",
     "sourceLabel": "Spincoaster - NIGHT FISHINGレポート",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "explanation": "小樽市で開催されたRSRの一般公募枠「RISING STAR」にCD未発売ながら出演し、注目を集めた。",
     "sourceUrl": "https://ja.wikipedia.org/wiki/NIGHT_FISHING",
     "sourceLabel": "Wikipedia - NIGHT FISHING",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "explanation": "2019年9月〜2021年12月にNHK Eテレで放送された。",
     "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
     "sourceLabel": "Wikipedia - サカナクション",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "explanation": "DISC-1は札幌市円山の「Studio Bepop」、DISC-2は東京の「青葉台スタジオ」の緯度経度を示し、その2点間の直線距離が834.194km。",
     "sourceUrl": "https://aki6699.hatenablog.com/entry/sakanaction/834.194/",
     "sourceLabel": "834.194の由来解説",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "explanation": "ドラマー江島啓一がクラブミュージックに馴染めるよう、また山口の歌唱と作曲にちょうどよいBPMとして全曲126に統一された。",
     "sourceUrl": "https://mag.digle.tokyo/sch/artist/album/52158",
     "sourceLabel": "サカナクション全アルバム解説",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "explanation": "クラシック音楽の様式を取り入れ、Queenの「ボヘミアン・ラプソディ」をオマージュした楽曲。山口がリード曲として最後まで推していた。",
     "sourceUrl": "https://mag.digle.tokyo/sch/artist/album/52158",
     "sourceLabel": "サカナクション全アルバム解説",
-    "relatedSong": "ナイトフィッシングイズグッド"
+    "relatedSong": "ナイトフィッシングイズグッド",
+    "contributor": null
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "explanation": "アルバム『sakanaction』がオリコン週間チャート1位を獲得し、同年のNHK紅白歌合戦に初出場を果たした。",
     "sourceUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AB%E3%83%8A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
     "sourceLabel": "Wikipedia - サカナクション",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   },
   {
     "id": 10,
@@ -117,6 +126,7 @@
     "explanation": "2018年リリースの初ベストアルバム。テーマは『図鑑』で、バンドの世界観の深さを収録曲で表現した構成。",
     "sourceUrl": "https://mag.digle.tokyo/sch/artist/album/52158",
     "sourceLabel": "サカナクション全アルバム解説",
-    "relatedSong": null
+    "relatedSong": null,
+    "contributor": null
   }
 ]

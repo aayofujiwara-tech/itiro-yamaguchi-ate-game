@@ -419,117 +419,65 @@ export default function QuizGame({ mode }: QuizGameProps) {
     const officialUrl = raw.officialUrl as string | null | undefined;
     const officialUrlLabel = raw.officialUrlLabel as string | null | undefined;
     const contributor = raw.contributor as string | null | undefined;
+    const explanation = raw.explanation as string | undefined;
 
-    switch (mode) {
-      case "image":
-        return (
-          <div className="space-y-3 animate-fade-in">
-            {officialUrl && (
-              <div className="flex justify-center">
-                <OfficialLink href={officialUrl} label={officialUrlLabel || "📺 この配信を観る"} />
-              </div>
-            )}
-            {relatedSong && (
-              <div className="flex justify-center">
-                <SpotifyLink songTitle={relatedSong} />
-              </div>
-            )}
-            {renderSourceLink()}
-            <div className="flex justify-center">
-              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
-            </div>
-            {contributor && (
-              <p className="text-xs text-center" style={{ color: "var(--text-sub)", opacity: 0.7 }}>
-                📸 問題提供: {contributor}
-              </p>
-            )}
-          </div>
-        );
-      case "cult":
-        return (
-          <div className="space-y-3 animate-fade-in">
-            <div
-              className="text-sm px-4 py-3 rounded-md"
-              style={{
-                backgroundColor: "rgba(0, 212, 255, 0.05)",
-                border: "1px solid rgba(0, 212, 255, 0.15)",
-                color: "var(--text-sub)",
-              }}
-            >
-              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
-              {raw.explanation as string}
-            </div>
-            {relatedSong && (
-              <div className="flex justify-center">
-                <SpotifyLink songTitle={relatedSong} />
-              </div>
-            )}
-            {renderSourceLink()}
-            <div className="flex justify-center">
-              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
-            </div>
-          </div>
-        );
-      case "lyrics-fill":
-        return (
-          <div className="flex flex-wrap gap-2 justify-center animate-fade-in">
-            <SpotifyLink songTitle={raw.songTitle as string} />
-            <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
-          </div>
-        );
-      case "lyrics-intro":
-        return (
-          <div className="text-center space-y-3 animate-fade-in">
-            <p
-              className="text-xl font-bold"
-              style={{ color: "var(--text-main)" }}
-            >
-              {raw.answer as string}
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <SpotifyLink songTitle={raw.answer as string} />
-              <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
-            </div>
-          </div>
-        );
-      case "quotes": {
-        const category = raw.category as string;
-        return (
-          <div className="space-y-3 animate-fade-in">
-            <div
-              className="text-sm px-4 py-3 rounded-md"
-              style={{
-                backgroundColor: "rgba(0, 212, 255, 0.05)",
-                border: "1px solid rgba(0, 212, 255, 0.15)",
-                color: "var(--text-sub)",
-              }}
-            >
-              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
-              {raw.explanation as string}
-            </div>
-            {relatedSong && (
-              <div className="flex justify-center">
-                <SpotifyLink songTitle={relatedSong} />
-              </div>
-            )}
-            <p
-              className="text-xs text-center"
-              style={{ color: "var(--text-sub)" }}
-            >
-              出典: {raw.source as string}
-            </p>
-            {renderSourceLink()}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {category === "サカナLOCKS!" && (
-                <OfficialLink href="https://www.tfm.co.jp/lock/sakana/" label="📻 サカナLOCKS!" />
-              )}
-            </div>
-          </div>
-        );
-      }
-      default:
-        return null;
+    // Determine Spotify song title based on mode
+    let spotifySong: string | null = null;
+    if (mode === "lyrics-fill") {
+      spotifySong = raw.songTitle as string;
+    } else if (mode === "lyrics-intro") {
+      spotifySong = raw.answer as string;
+    } else if (relatedSong) {
+      spotifySong = relatedSong;
     }
+
+    return (
+      <div className="space-y-3 animate-fade-in">
+        {/* 1. 解説 */}
+        {explanation && (
+          <div
+            className="text-sm px-4 py-3 rounded-md"
+            style={{
+              backgroundColor: "rgba(0, 212, 255, 0.05)",
+              border: "1px solid rgba(0, 212, 255, 0.15)",
+              color: "var(--text-sub)",
+            }}
+          >
+            <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+            {explanation}
+          </div>
+        )}
+
+        {/* 2. 公式アーカイブ (image mode) */}
+        {officialUrl && (
+          <div className="flex justify-center">
+            <OfficialLink href={officialUrl} label={officialUrlLabel || "📺 この配信を観る"} />
+          </div>
+        )}
+
+        {/* 3. Spotify */}
+        {spotifySong && (
+          <div className="flex justify-center">
+            <SpotifyLink songTitle={spotifySong} />
+          </div>
+        )}
+
+        {/* 4. 出典 */}
+        {renderSourceLink()}
+
+        {/* 5. 公式リンク */}
+        <div className="flex justify-center">
+          <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+        </div>
+
+        {/* 6. 問題提供者 */}
+        {contributor && (
+          <p className="text-xs text-center" style={{ color: "var(--text-sub)", opacity: 0.7 }}>
+            📸 問題提供: {contributor}
+          </p>
+        )}
+      </div>
+    );
   };
 
   return (

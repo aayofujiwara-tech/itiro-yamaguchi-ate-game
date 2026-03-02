@@ -6,7 +6,10 @@
     "blank": "新しい",
     "lyricAfter": "朝が来た",
     "options": ["新しい", "輝く", "眩しい", "遥かな"],
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 2,
@@ -15,7 +18,10 @@
     "blank": "この道は",
     "lyricAfter": "続いてる",
     "options": ["この道は", "あの空は", "その先は", "夜の中"],
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 3,
@@ -24,7 +30,10 @@
     "blank": "東側に",
     "lyricAfter": "踊り子がいた",
     "options": ["東側に", "向こうに", "入口に", "片隅に"],
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 4,
@@ -33,7 +42,10 @@
     "blank": "僕の",
     "lyricAfter": "ミュージック",
     "options": ["僕の", "夜の", "君の", "愛の"],
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 5,
@@ -42,7 +54,10 @@
     "blank": "何を持って",
     "lyricAfter": "僕と思う",
     "options": ["何を持って", "誰が見ても", "いつまでも", "どこにいても"],
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 6,
@@ -51,7 +66,10 @@
     "blank": "あの日の",
     "lyricAfter": "メロディー",
     "options": ["あの日の", "夏の日", "遠い日", "二人の"],
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 7,
@@ -60,7 +78,10 @@
     "blank": "僕の",
     "lyricAfter": "描いた世界",
     "options": ["僕の", "君の", "夜の", "昨日"],
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 8,
@@ -69,7 +90,10 @@
     "blank": "消えた",
     "lyricAfter": "言葉",
     "options": ["消えた", "揺れた", "落ちた", "飛んだ"],
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 9,
@@ -78,7 +102,10 @@
     "blank": "話したいな",
     "lyricAfter": "君に",
     "options": ["話したいな", "会いたいな", "届けたいな", "伝えたいな"],
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 10,
@@ -87,6 +114,9 @@
     "blank": "旋律を",
     "lyricAfter": "夜に聴いた",
     "options": ["旋律を", "音色を", "調べを", "響きを"],
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   }
 ]

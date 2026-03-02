@@ -12,7 +12,6 @@ import LyricsFillQuestion from "./LyricsFillQuestion";
 import LyricsIntroQuestion from "./LyricsIntroQuestion";
 import QuoteQuestion from "./QuoteQuestion";
 import SpotifyLink from "./SpotifyLink";
-import OfficialLink from "./OfficialLink";
 import Footer from "./Footer";
 
 import cultData from "@/data/cult-quiz.json";
@@ -293,82 +292,55 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
 
   const renderPostAnswerContent = () => {
     const relatedSong = raw.relatedSong as string | null | undefined;
+    const contributor = raw.contributor as string | null | undefined;
+    const explanation = raw.explanation as string | undefined;
+    const quizType = currentQuiz.quizType;
 
-    switch (currentQuiz.quizType) {
-      case "cult":
-        return (
-          <div className="space-y-3 animate-fade-in">
-            <div
-              className="text-sm px-4 py-3 rounded-md"
-              style={{
-                backgroundColor: "rgba(0, 212, 255, 0.05)",
-                border: "1px solid rgba(0, 212, 255, 0.15)",
-                color: "var(--text-sub)",
-              }}
-            >
-              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
-              {raw.explanation as string}
-            </div>
-            {relatedSong && (
-              <div className="flex justify-center">
-                <SpotifyLink songTitle={relatedSong} />
-              </div>
-            )}
-            {renderSourceLink()}
-          </div>
-        );
-      case "lyrics-fill":
-        return (
-          <div className="flex flex-wrap gap-2 justify-center animate-fade-in">
-            <SpotifyLink songTitle={raw.songTitle as string} />
-          </div>
-        );
-      case "lyrics-intro":
-        return (
-          <div className="text-center space-y-3 animate-fade-in">
-            <p
-              className="text-xl font-bold"
-              style={{ color: "var(--text-main)" }}
-            >
-              {raw.answer as string}
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <SpotifyLink songTitle={raw.answer as string} />
-            </div>
-          </div>
-        );
-      case "quotes": {
-        return (
-          <div className="space-y-3 animate-fade-in">
-            <div
-              className="text-sm px-4 py-3 rounded-md"
-              style={{
-                backgroundColor: "rgba(0, 212, 255, 0.05)",
-                border: "1px solid rgba(0, 212, 255, 0.15)",
-                color: "var(--text-sub)",
-              }}
-            >
-              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
-              {raw.explanation as string}
-            </div>
-            {relatedSong && (
-              <div className="flex justify-center">
-                <SpotifyLink songTitle={relatedSong} />
-              </div>
-            )}
-            <p
-              className="text-xs text-center"
-              style={{ color: "var(--text-sub)" }}
-            >
-              出典: {raw.source as string}
-            </p>
-            {renderSourceLink()}
-          </div>
-        );
-      }
-      default:
-        return null;
+    // Determine Spotify song title based on quiz type
+    let spotifySong: string | null = null;
+    if (quizType === "lyrics-fill") {
+      spotifySong = raw.songTitle as string;
+    } else if (quizType === "lyrics-intro") {
+      spotifySong = raw.answer as string;
+    } else if (relatedSong) {
+      spotifySong = relatedSong;
     }
+
+    return (
+      <div className="space-y-3 animate-fade-in">
+        {/* 1. 解説 */}
+        {explanation && (
+          <div
+            className="text-sm px-4 py-3 rounded-md"
+            style={{
+              backgroundColor: "rgba(0, 212, 255, 0.05)",
+              border: "1px solid rgba(0, 212, 255, 0.15)",
+              color: "var(--text-sub)",
+            }}
+          >
+            <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+            {explanation}
+          </div>
+        )}
+
+        {/* 2. Spotify */}
+        {spotifySong && (
+          <div className="flex justify-center">
+            <SpotifyLink songTitle={spotifySong} />
+          </div>
+        )}
+
+        {/* 3. 出典 */}
+        {renderSourceLink()}
+
+        {/* 4. 問題提供者 */}
+        {contributor && (
+          <p className="text-xs text-center" style={{ color: "var(--text-sub)", opacity: 0.7 }}>
+            📸 問題提供: {contributor}
+          </p>
+        )}
+      </div>
+    );
   };
 
   return (

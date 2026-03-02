@@ -5,7 +5,10 @@
     "answer": "M",
     "options": ["M", "三日月サンセット", "白波トップウォーター", "さよならはエモーション"],
     "hintLength": 7,
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "answer": "怪獣",
     "options": ["怪獣", "アルクアラウンド", "ミュージック", "アイデンティティ"],
     "hintLength": 4,
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "answer": "忘れられないの",
     "options": ["忘れられないの", "ナイトフィッシングイズグッド", "グッドバイ", "蓮の花"],
     "hintLength": 7,
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "answer": "新宝島",
     "options": ["新宝島", "多分、風。", "ネイティブダンサー", "アルクアラウンド"],
     "hintLength": 5,
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "answer": "ナイトフィッシングイズグッド",
     "options": ["ナイトフィッシングイズグッド", "バッハの旋律を夜に聴いたせいです。", "目が明く藍色", "セントレイ"],
     "hintLength": 4,
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "answer": "セントレイ",
     "options": ["セントレイ", "サンプル", "三日月サンセット", "さよならはエモーション"],
     "hintLength": 4,
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 7,
@@ -53,7 +71,10 @@
     "answer": "怪獣",
     "options": ["怪獣", "目が明く藍色", "夜の踊り子", "ナイトフィッシングイズグッド"],
     "hintLength": 6,
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 8,
@@ -61,7 +82,10 @@
     "answer": "多分、風。",
     "options": ["多分、風。", "グッドバイ", "蓮の花", "ユリイカ"],
     "hintLength": 5,
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 9,
@@ -69,7 +93,10 @@
     "answer": "ネイティブダンサー",
     "options": ["ネイティブダンサー", "アルクアラウンド", "僕と花", "アイデンティティ"],
     "hintLength": 5,
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   },
   {
     "id": 10,
@@ -77,6 +104,9 @@
     "answer": "バッハの旋律を夜に聴いたせいです。",
     "options": ["バッハの旋律を夜に聴いたせいです。", "ミュージック", "エンドレス", "DocumentaLy"],
     "hintLength": 7,
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null
   }
 ]
