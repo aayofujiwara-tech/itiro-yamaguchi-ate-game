@@ -31,13 +31,13 @@ h1, h2, h3, h4, h5, h6, p, span, div:not(input):not(textarea) {
 input, textarea {
   caret-color: auto;
   outline: none;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 212, 255, 0.4);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus, textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+  border-color: #00d4ff;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
 }
 
 input.border-error {

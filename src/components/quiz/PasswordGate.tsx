@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Footer from "./Footer";
 
 const STORAGE_KEY = "quiz_authenticated";
@@ -27,6 +27,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
   const { authenticated, authenticate } = useAuth();
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   if (authenticated) {
     return <>{children}</>;
@@ -46,6 +47,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
     <div
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
+      onClick={() => inputRef.current?.focus()}
     >
       <div className="flex-1 flex items-center justify-center px-4">
       <div className="w-full max-w-sm animate-fade-in">
@@ -70,6 +72,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
+              ref={inputRef}
               type="password"
               value={password}
               onChange={(e) => {
