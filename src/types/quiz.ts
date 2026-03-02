@@ -19,10 +19,18 @@ export interface CategoryScore {
 
 export interface Quiz {
   id: number;
-  imageUrl: string;
+  imageId: string;
   answer: string;
   hint: string;
   options: string[];
+  officialUrl: string | null;
+  officialUrlLabel: string | null;
+  category: string;
+  sourceUrl: string | null;
+  sourceLabel: string | null;
+  contributor: string | null;
+  relatedSong: string | null;
+  difficulty: string;
 }
 
 export interface CultQuiz {

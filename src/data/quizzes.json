@@ -1,67 +1,202 @@
 [
   {
     "id": 1,
-    "imageUrl": "https://example.com/image1.jpg",
-    "answer": "2023/10/27 NF offline",
-    "hint": "NFメンバー限定のオフライン配信",
+    "imageId": "sakanaction-quiz/stream_20251209",
+    "answer": "2025/12/9 今夜も雑談中（チャンネル3周年）",
+    "hint": "チャンネルの節目を祝った配信",
     "options": [
-      "2023/10/27 NF offline",
-      "2023/11/15 山口一郎ベスト",
-      "2024/01/10 楽曲制作配信",
-      "2023/12/20 年末スペシャル"
+      "2025/12/9 今夜も雑談中（チャンネル3周年）",
+      "2025/9/7 誕生日カウントダウン配信",
+      "2024/12/31 年越し雑談配信",
+      "2025/12/29 ライブ納め配信"
     ],
-    "relatedSong": null
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "medium"
   },
   {
     "id": 2,
-    "imageUrl": "https://example.com/image2.jpg",
-    "answer": "2024/01/10 楽曲制作配信",
-    "hint": "DTMの画面が映っていた回",
+    "imageId": "sakanaction-quiz/stream_20250907",
+    "answer": "2025/9/7 感謝感謝の誕生日カウントダウン配信",
+    "hint": "深夜0時をまたいだ特別な配信",
     "options": [
-      "2023/10/27 NF offline",
-      "2024/01/10 楽曲制作配信",
-      "2024/02/14 バレンタイン配信",
-      "2023/09/05 新曲プレビュー"
+      "2025/9/7 感謝感謝の誕生日カウントダウン配信",
+      "2025/12/9 チャンネル3周年配信",
+      "2025/12/29 ライブ納め配信",
+      "2025/8/15 今夜も雑談中"
     ],
-    "relatedSong": null
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "medium"
   },
   {
     "id": 3,
-    "imageUrl": "https://example.com/image3.jpg",
-    "answer": "2024/02/14 バレンタイン配信",
-    "hint": "2月のイベントに合わせた特別回",
+    "imageId": "sakanaction-quiz/stream_20250930",
+    "answer": "2025/9/30 祝！リリース10周年記念！新宝島祭！歌唱配信",
+    "hint": "ある楽曲の記念日に歌った配信",
     "options": [
-      "2024/02/14 バレンタイン配信",
-      "2024/03/01 春の配信",
-      "2023/12/25 クリスマス配信",
-      "2024/01/01 新年配信"
+      "2025/9/30 祝！リリース10周年記念！新宝島祭！歌唱配信",
+      "2025/5/9 デビュー記念日配信",
+      "2025/12/9 チャンネル3周年配信",
+      "2026/2/10 「いらない」リリース記念配信"
     ],
-    "relatedSong": null
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "歌唱配信",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": "新宝島",
+    "difficulty": "easy"
   },
   {
     "id": 4,
-    "imageUrl": "https://example.com/image4.jpg",
-    "answer": "2023/11/15 山口一郎ベスト",
-    "hint": "ベストアルバムについて語った回",
+    "imageId": "sakanaction-quiz/stream_20251229",
+    "answer": "2025/12/29 今夜も雑談中（ライブ納め！あとは紅白だけ！）",
+    "hint": "年末のフェス帰りに配信した回",
     "options": [
-      "2023/11/15 山口一郎ベスト",
-      "2023/10/01 秋の夜長配信",
-      "2024/01/10 楽曲制作配信",
-      "2023/12/20 年末スペシャル"
+      "2025/12/29 今夜も雑談中（ライブ納め！あとは紅白だけ！）",
+      "2024/12/31 年越しカウントダウン配信",
+      "2025/12/9 チャンネル3周年配信",
+      "2025/11/15 今夜も雑談中"
     ],
-    "relatedSong": null
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "medium"
   },
   {
     "id": 5,
-    "imageUrl": "https://example.com/image5.jpg",
-    "answer": "2023/12/20 年末スペシャル",
-    "hint": "年末の振り返り配信",
+    "imageId": "sakanaction-quiz/stream_20260210",
+    "answer": "2026/2/10 「いらない」リリース記念！フル尺＆生歌初披露配信",
+    "hint": "新曲のリリース日に特別な配信をした回",
     "options": [
-      "2023/12/20 年末スペシャル",
-      "2024/02/14 バレンタイン配信",
-      "2023/11/15 山口一郎ベスト",
-      "2024/03/01 春の配信"
+      "2026/2/10 「いらない」リリース記念！フル尺＆生歌初披露配信",
+      "2025/9/30 新宝島祭！歌唱配信",
+      "2025/12/9 チャンネル3周年配信",
+      "2025/11/15 今夜も雑談中"
     ],
-    "relatedSong": null
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "歌唱配信",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": "いらない",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "imageId": "sakanaction-quiz/stream_20241108",
+    "answer": "2024/11/8 今夜も雑談中（SAKANAQUARIUM 2024 turn 映画公開告知）",
+    "hint": "映画館での公開が発表された配信",
+    "options": [
+      "2024/11/8 今夜も雑談中（SAKANAQUARIUM 2024 turn 映画公開告知）",
+      "2024/7/20 今夜も雑談中",
+      "2025/9/27 今夜も雑談中",
+      "2025/7/16 今夜も配信中"
+    ],
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "imageId": "sakanaction-quiz/stream_20251115",
+    "answer": "2025/11/15 今夜も雑談中（小樽の母校で講演した話）",
+    "hint": "故郷での活動を語った配信",
+    "options": [
+      "2025/11/15 今夜も雑談中（小樽の母校で講演した話）",
+      "2025/9/27 今夜も雑談中",
+      "2025/8/15 今夜も雑談中",
+      "2025/12/9 チャンネル3周年配信"
+    ],
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": "新宝島",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "imageId": "sakanaction-quiz/stream_20250716",
+    "answer": "2025/7/16 今夜も配信中（30歳まで梅雨を知らなかった話）",
+    "hint": "北海道出身ならではのエピソードが出た配信",
+    "options": [
+      "2025/7/16 今夜も配信中（30歳まで梅雨を知らなかった話）",
+      "2025/8/15 今夜も雑談中",
+      "2025/9/5 今夜も雑談中",
+      "2025/5/9 今夜も雑談中"
+    ],
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "imageId": "sakanaction-quiz/stream_20250927",
+    "answer": "2025/9/27 今夜も雑談中（タローマン万博大爆発の舞台挨拶話）",
+    "hint": "映画の舞台挨拶を3回もやった話をした配信",
+    "options": [
+      "2025/9/27 今夜も雑談中（タローマン万博大爆発の舞台挨拶話）",
+      "2024/11/8 今夜も雑談中",
+      "2025/11/15 今夜も雑談中",
+      "2025/12/29 ライブ納め配信"
+    ],
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "imageId": "sakanaction-quiz/stream_20241231",
+    "answer": "2024/12/31 年越しカウントダウン配信",
+    "hint": "年末にみんなと年越しした配信",
+    "options": [
+      "2024/12/31 年越しカウントダウン配信",
+      "2025/12/29 ライブ納め配信",
+      "2025/9/7 誕生日カウントダウン配信",
+      "2025/12/9 チャンネル3周年配信"
+    ],
+    "officialUrl": null,
+    "officialUrlLabel": null,
+    "category": "今夜も雑談中",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "contributor": null,
+    "relatedSong": null,
+    "difficulty": "medium"
   }
 ]

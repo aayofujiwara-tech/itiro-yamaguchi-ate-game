@@ -326,7 +326,7 @@ export default function QuizGame({ mode }: QuizGameProps) {
       case "image":
         return (
           <QuizImage
-            imageUrl={raw.imageUrl as string}
+            imageId={raw.imageId as string}
             questionNumber={currentIndex + 1}
           />
         );
@@ -415,16 +415,18 @@ export default function QuizGame({ mode }: QuizGameProps) {
   };
 
   const renderPostAnswerContent = () => {
-    const archiveUrl = raw.archiveUrl as string | undefined;
     const relatedSong = raw.relatedSong as string | null | undefined;
+    const officialUrl = raw.officialUrl as string | null | undefined;
+    const officialUrlLabel = raw.officialUrlLabel as string | null | undefined;
+    const contributor = raw.contributor as string | null | undefined;
 
     switch (mode) {
       case "image":
         return (
           <div className="space-y-3 animate-fade-in">
-            {archiveUrl && (
+            {officialUrl && (
               <div className="flex justify-center">
-                <OfficialLink href={archiveUrl} label="📺 この配信を観る" />
+                <OfficialLink href={officialUrl} label={officialUrlLabel || "📺 この配信を観る"} />
               </div>
             )}
             {relatedSong && (
@@ -432,9 +434,15 @@ export default function QuizGame({ mode }: QuizGameProps) {
                 <SpotifyLink songTitle={relatedSong} />
               </div>
             )}
+            {renderSourceLink()}
             <div className="flex justify-center">
               <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
             </div>
+            {contributor && (
+              <p className="text-xs text-center" style={{ color: "var(--text-sub)", opacity: 0.7 }}>
+                📸 問題提供: {contributor}
+              </p>
+            )}
           </div>
         );
       case "cult":

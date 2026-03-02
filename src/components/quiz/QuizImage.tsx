@@ -3,13 +3,22 @@
 import { useState } from "react";
 
 interface QuizImageProps {
-  imageUrl: string;
+  imageId: string;
   questionNumber: number;
 }
 
-export default function QuizImage({ imageUrl, questionNumber }: QuizImageProps) {
+function buildCloudinaryUrl(imageId: string): string | null {
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  if (!cloudName) return null;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/w_800,q_auto,f_auto/${imageId}`;
+}
+
+export default function QuizImage({ imageId, questionNumber }: QuizImageProps) {
+  const imageUrl = buildCloudinaryUrl(imageId);
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
+
+  const showPlaceholder = !imageUrl || error;
 
   return (
     <div className="w-full flex justify-center mb-8">
@@ -21,14 +30,14 @@ export default function QuizImage({ imageUrl, questionNumber }: QuizImageProps) 
           border: "1px solid var(--border)",
         }}
       >
-        {!loaded && !error && (
+        {!loaded && !showPlaceholder && (
           <div
             className="skeleton-loader w-full"
             style={{ aspectRatio: "16/9" }}
           />
         )}
 
-        {error ? (
+        {showPlaceholder ? (
           <div
             className="flex flex-col items-center justify-center w-full"
             style={{
@@ -50,7 +59,7 @@ export default function QuizImage({ imageUrl, questionNumber }: QuizImageProps) 
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
             </svg>
-            <p className="text-sm">画像を読み込めませんでした</p>
+            <p className="text-sm">配信画像を準備中です</p>
             <p className="text-xs mt-1 opacity-60">Question {questionNumber}</p>
           </div>
         ) : (
