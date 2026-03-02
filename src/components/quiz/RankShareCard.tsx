@@ -7,11 +7,18 @@ interface RankShareCardProps {
   scorePercent: number;
 }
 
+function isMobileDevice(): boolean {
+  if (typeof window === "undefined") return false;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  ) || (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
+}
+
 export default function RankShareCard({ scorePercent }: RankShareCardProps) {
   const rank = getRank(scorePercent);
   const [copied, setCopied] = useState(false);
-  const [canShare] = useState(() =>
-    typeof navigator !== "undefined" && !!navigator.share
+  const [canNativeShare] = useState(() =>
+    typeof navigator !== "undefined" && !!navigator.share && isMobileDevice()
   );
 
   const shareText = `🐟 深海探査レベル測定の結果\n\n${rank.emoji} ${rank.title}（${rank.depth}）\n${rank.description}\n\n正答率: ${scorePercent}%\n\n#深海探査レベル測定 #サカナクション`;
@@ -76,7 +83,7 @@ export default function RankShareCard({ scorePercent }: RankShareCardProps) {
       </div>
 
       {/* Share Buttons */}
-      {canShare ? (
+      {canNativeShare ? (
         <button
           onClick={handleNativeShare}
           className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
