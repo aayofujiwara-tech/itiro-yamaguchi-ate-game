@@ -43,5 +43,50 @@
     "lyricAfter": "僕と思う",
     "options": ["何を持って", "誰が見ても", "いつまでも", "どこにいても"],
     "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "songTitle": "セントレイ",
+    "lyricBefore": "思い出す",
+    "blank": "あの日の",
+    "lyricAfter": "メロディー",
+    "options": ["あの日の", "夏の日", "遠い日", "二人の"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "songTitle": "グッドバイ",
+    "lyricBefore": "さよなら",
+    "blank": "僕の",
+    "lyricAfter": "描いた世界",
+    "options": ["僕の", "君の", "夜の", "昨日"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "songTitle": "多分、風。",
+    "lyricBefore": "泡になって",
+    "blank": "消えた",
+    "lyricAfter": "言葉",
+    "options": ["消えた", "揺れた", "落ちた", "飛んだ"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "songTitle": "ネイティブダンサー",
+    "lyricBefore": "",
+    "blank": "話したいな",
+    "lyricAfter": "君に",
+    "options": ["話したいな", "会いたいな", "届けたいな", "伝えたいな"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "songTitle": "バッハの旋律を夜に聴いたせいです。",
+    "lyricBefore": "バッハの",
+    "blank": "旋律を",
+    "lyricAfter": "夜に聴いた",
+    "options": ["旋律を", "音色を", "調べを", "響きを"],
+    "difficulty": "easy"
   }
 ]

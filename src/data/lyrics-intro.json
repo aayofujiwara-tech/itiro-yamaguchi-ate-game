@@ -38,5 +38,45 @@
     "options": ["ナイトフィッシングイズグッド", "バッハの旋律を夜に聴いたせいです。", "目が明く藍色", "セントレイ"],
     "hintLength": 4,
     "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "lyricsHint": "思い出す",
+    "answer": "セントレイ",
+    "options": ["セントレイ", "サンプル", "三日月サンセット", "さよならはエモーション"],
+    "hintLength": 4,
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "lyricsHint": "この暗い夜の",
+    "answer": "怪獣",
+    "options": ["怪獣", "目が明く藍色", "夜の踊り子", "ナイトフィッシングイズグッド"],
+    "hintLength": 6,
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "lyricsHint": "泡になって",
+    "answer": "多分、風。",
+    "options": ["多分、風。", "グッドバイ", "蓮の花", "ユリイカ"],
+    "hintLength": 5,
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "lyricsHint": "話したいな",
+    "answer": "ネイティブダンサー",
+    "options": ["ネイティブダンサー", "アルクアラウンド", "僕と花", "アイデンティティ"],
+    "hintLength": 5,
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "lyricsHint": "バッハの旋律を",
+    "answer": "バッハの旋律を夜に聴いたせいです。",
+    "options": ["バッハの旋律を夜に聴いたせいです。", "ミュージック", "エンドレス", "DocumentaLy"],
+    "hintLength": 7,
+    "difficulty": "easy"
   }
 ]

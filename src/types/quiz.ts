@@ -1,5 +1,22 @@
 export type QuizMode = "image" | "cult" | "lyrics-fill" | "lyrics-intro" | "quotes";
 
+export type RandomQuizType = "cult" | "lyrics-fill" | "lyrics-intro" | "quotes";
+export type RandomDifficulty = "easy" | "medium" | "hard";
+
+export interface RandomQuizItem {
+  quizType: RandomQuizType;
+  id: number;
+  answer: string;
+  options: string[];
+  raw: Record<string, unknown>;
+}
+
+export interface CategoryScore {
+  quizType: RandomQuizType;
+  correct: number;
+  total: number;
+}
+
 export interface Quiz {
   id: number;
   imageUrl: string;
@@ -49,7 +66,7 @@ export interface IchiroQuote {
 }
 
 export interface ModeConfig {
-  mode: QuizMode;
+  mode: QuizMode | string;
   title: string;
   icon: string;
   description: string;

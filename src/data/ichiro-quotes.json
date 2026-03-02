@@ -83,5 +83,90 @@
     "category": "サカナLOCKS!",
     "difficulty": "medium",
     "explanation": "バンド部の顧問として、リスナーからのギターに関する質問に答えた際の格言。"
+  },
+  {
+    "id": 6,
+    "quote": "本当のポップスっていうのは、5年後に評価されるもの",
+    "answer": "松任谷由実との対話で受けた言葉として語ったインタビュー",
+    "options": [
+      "松任谷由実との対話で受けた言葉として語ったインタビュー",
+      "NHK紅白歌合戦出場後の記者会見",
+      "サカナLOCKS!での授業中の発言",
+      "834.194リリース記念のファンミーティング"
+    ],
+    "source": "rockin'on インタビュー（834.194）",
+    "sourceUrl": "https://rockinon.com/interview/detail/187290",
+    "sourceLabel": "rockin'on 834.194 インタビュー",
+    "category": "インタビュー",
+    "difficulty": "hard",
+    "explanation": "ユーミンに「ポップス作りたい」と話したところ返ってきた言葉。5年後に評価されるものが本当のポップスだという感覚に、山口は確信を得た。"
+  },
+  {
+    "id": 7,
+    "quote": "紅白に出た時、ここじゃない感があった。こういうことを目的にバンド始めたはずじゃない",
+    "answer": "834.194リリース時のrockin'onインタビュー",
+    "options": [
+      "834.194リリース時のrockin'onインタビュー",
+      "サカナLOCKS!最終回での告白",
+      "YouTube配信での深夜の独白",
+      "NIGHT FISHINGのトークセッション"
+    ],
+    "source": "rockin'on インタビュー（834.194）",
+    "sourceUrl": "https://rockinon.com/interview/detail/187290",
+    "sourceLabel": "rockin'on 834.194 インタビュー",
+    "category": "インタビュー",
+    "difficulty": "medium",
+    "explanation": "sakanaction後にセールス目標を達成しながらも、本来の目的との乖離を感じ、外に向かった露出活動に限界を感じたと語った。"
+  },
+  {
+    "id": 8,
+    "quote": "どんだけ潜っても、自分の音楽に必ずたどり着けるって自信がついた",
+    "answer": "サカナLOCKS!で834.194完成までの6年間を振り返った回",
+    "options": [
+      "サカナLOCKS!で834.194完成までの6年間を振り返った回",
+      "音楽ナタリーのロングインタビュー",
+      "NHKシュガー&シュガーの番組内",
+      "NF OFFLINEでのファンとの対談"
+    ],
+    "source": "SCHOOL OF LOCK! サカナLOCKS!",
+    "sourceUrl": "https://www.tfm.co.jp/lock/sakana/index.php?itemid=13184",
+    "sourceLabel": "サカナLOCKS! 834.194振り返り",
+    "category": "サカナLOCKS!",
+    "difficulty": "hard",
+    "explanation": "「エンドレス」の制作に9ヶ月かかった経験から、潜れば必ず自分の音楽にたどり着けるという確信を得たと語った。"
+  },
+  {
+    "id": 9,
+    "quote": "音楽を楽しむのに年齢なんて関係ないし、自由に我を忘れて踊っている人ほど美しい",
+    "answer": "ライブやフェスについて語ったインタビュー",
+    "options": [
+      "ライブやフェスについて語ったインタビュー",
+      "SAKANAQUARIUM MCでの観客への言葉",
+      "Instagram Liveでのファンとの雑談",
+      "NF OFFLINEでの開催挨拶"
+    ],
+    "source": "名語録・名言集",
+    "sourceUrl": "https://jp-word.net/yamaguchi-ichiro",
+    "sourceLabel": "山口一郎 名語録・名言集",
+    "category": "インタビュー",
+    "difficulty": "medium",
+    "explanation": "音楽の現場での自由な楽しみ方を肯定する、山口の音楽観を象徴する言葉。"
+  },
+  {
+    "id": 10,
+    "quote": "音楽はいつも音楽に関わる音楽以外の事から作られる",
+    "answer": "音楽制作の哲学について語ったインタビュー",
+    "options": [
+      "音楽制作の哲学について語ったインタビュー",
+      "NIGHT FISHINGの開催趣旨を説明した記者会見",
+      "サカナLOCKS!での音楽論の授業",
+      "シュガー&シュガーの実験企画中の発言"
+    ],
+    "source": "名語録・名言集",
+    "sourceUrl": "https://jp-word.net/yamaguchi-ichiro",
+    "sourceLabel": "山口一郎 名語録・名言集",
+    "category": "インタビュー",
+    "difficulty": "medium",
+    "explanation": "NF（NIGHT FISHING）の活動コンセプトにも通じる、音楽と他のカルチャーの関係性についての信念。"
   }
 ]
