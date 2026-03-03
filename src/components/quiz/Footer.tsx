@@ -39,6 +39,13 @@ export default function Footer() {
           >
             サカナクション公式
           </a>
+          <Link
+            href="/intro/1"
+            className="footer-link transition-colors duration-200"
+            style={{ color: "#6b7280" }}
+          >
+            このサイトの原点を読み直す
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import IntroGate from "@/components/quiz/IntroGate";
 import PasswordGate from "@/components/quiz/PasswordGate";
 import QuizModeSelect from "@/components/quiz/QuizModeSelect";
 
@@ -15,8 +16,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <PasswordGate>
-      <QuizModeSelect />
-    </PasswordGate>
+    <IntroGate>
+      <PasswordGate>
+        <QuizModeSelect />
+      </PasswordGate>
+    </IntroGate>
   );
 }
