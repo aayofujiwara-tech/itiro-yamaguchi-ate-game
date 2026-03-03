@@ -157,3 +157,11 @@ input.border-error:focus {
   background-color: rgba(0, 212, 255, 0.08);
   box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

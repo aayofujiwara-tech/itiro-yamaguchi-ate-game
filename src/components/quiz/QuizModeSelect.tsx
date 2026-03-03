@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import type { ModeConfig } from "@/types/quiz";
 import Footer from "./Footer";
 import imageData from "@/data/quizzes.json";
 import cultData from "@/data/cult-quiz.json";
@@ -34,9 +33,9 @@ const randomModes = [
   },
 ];
 
-const modes: ModeConfig[] = [
+const individualModes = [
   {
-    mode: "image",
+    key: "image",
     title: "配信画像当て",
     icon: "🖼️",
     description: "配信画像を見てどの回か当てよう",
@@ -44,15 +43,15 @@ const modes: ModeConfig[] = [
     questionCount: imageData.length,
   },
   {
-    mode: "cult",
+    key: "cult",
     title: "カルトクイズ",
     icon: "🧠",
-    description: "サカナクションのマニアック知識に挑戦",
+    description: "マニアック知識に挑戦",
     path: "/quiz/cult",
     questionCount: cultData.length,
   },
   {
-    mode: "lyrics-fill",
+    key: "lyrics-fill",
     title: "歌詞穴埋め",
     icon: "📝",
     description: "歌詞の空欄を埋めよう",
@@ -60,7 +59,7 @@ const modes: ModeConfig[] = [
     questionCount: lyricsFillData.length,
   },
   {
-    mode: "lyrics-intro",
+    key: "lyrics-intro",
     title: "イントロ歌詞当て",
     icon: "🎵",
     description: "歌い出しから曲名を当てよう",
@@ -68,20 +67,12 @@ const modes: ModeConfig[] = [
     questionCount: lyricsIntroData.length,
   },
   {
-    mode: "quotes",
+    key: "quotes",
     title: "一郎語録当て",
     icon: "💬",
-    description: "山口一郎の名言の場面を当てよう",
+    description: "名言の場面を当てよう",
     path: "/quiz/quotes",
     questionCount: quotesData.length,
-  },
-  {
-    mode: "archive",
-    title: "遡行型遡上",
-    icon: "🔄",
-    description: "アーカイブ配信から出題",
-    path: "/quiz/archive",
-    questionCount: archiveData.length,
   },
 ];
 
@@ -103,6 +94,44 @@ export default function QuizModeSelect() {
           <p className="text-base" style={{ color: "var(--text-sub)" }}>
             あなたの深海探査レベルは？
           </p>
+        </div>
+
+        {/* 遡行型遡上 - 最上部に単独配置 */}
+        <div className="mb-8">
+          <Link
+            href="/quiz/archive"
+            className="mode-card block w-full rounded-xl p-6 transition-all duration-200"
+            style={{
+              backgroundColor: "var(--bg-card)",
+              border: "1px solid rgba(0, 212, 255, 0.3)",
+              boxShadow: "0 0 15px rgba(0, 212, 255, 0.08)",
+            }}
+          >
+            <div className="text-2xl">🔄</div>
+            <h3
+              className="text-lg font-bold mt-2"
+              style={{ color: "var(--text-main)" }}
+            >
+              遡行型遡上
+            </h3>
+            <p
+              className="text-sm mt-1"
+              style={{ color: "var(--text-sub)" }}
+            >
+              アーカイブ配信から出題
+            </p>
+            <span
+              className="inline-block mt-3 text-xs px-2 py-0.5 rounded-full"
+              style={{
+                backgroundColor: "rgba(0, 212, 255, 0.1)",
+                color: "var(--accent)",
+                border: "1px solid rgba(0, 212, 255, 0.2)",
+                fontFamily: "Inter, monospace",
+              }}
+            >
+              {archiveData.length}問
+            </span>
+          </Link>
         </div>
 
         {/* 深海探査 */}
@@ -162,33 +191,39 @@ export default function QuizModeSelect() {
               style={{ backgroundColor: "rgba(0, 212, 255, 0.3)" }}
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {modes.map((m) => (
+          {/* PC: flex row equal width / Mobile: horizontal scroll */}
+          <div className="flex gap-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide md:overflow-x-visible md:mx-0 md:px-0 md:pb-0">
+            {individualModes.map((m) => (
               <Link
-                key={m.mode}
+                key={m.key}
                 href={m.path}
-                className="mode-card block rounded-xl p-6 transition-all duration-200"
+                className="mode-card block rounded-lg p-3 transition-all duration-200 flex-shrink-0 w-32 md:flex-1 md:w-auto md:min-w-0 snap-start"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   border: "1px solid var(--border)",
                 }}
               >
-                <div className="text-3xl mb-3">{m.icon}</div>
+                <div className="text-lg">{m.icon}</div>
                 <h3
-                  className="text-lg font-bold mb-1"
+                  className="text-xs font-bold mt-1.5 truncate"
                   style={{ color: "var(--text-main)" }}
                 >
                   {m.title}
                 </h3>
                 <p
-                  className="text-sm mb-3"
-                  style={{ color: "var(--text-sub)" }}
+                  className="mt-0.5 truncate"
+                  style={{
+                    color: "var(--text-sub)",
+                    fontSize: "10px",
+                    lineHeight: "1.4",
+                  }}
                 >
                   {m.description}
                 </p>
                 <span
-                  className="inline-block text-xs px-2 py-1 rounded-full"
+                  className="inline-block mt-2 px-1.5 py-0.5 rounded-full"
                   style={{
+                    fontSize: "10px",
                     backgroundColor: "rgba(0, 212, 255, 0.1)",
                     color: "var(--accent)",
                     border: "1px solid rgba(0, 212, 255, 0.2)",
