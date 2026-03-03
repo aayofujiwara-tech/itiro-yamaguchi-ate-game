@@ -35,7 +35,7 @@ export default function IntroPage() {
       timers.push(
         setTimeout(() => {
           setVisibleParagraphs((prev) => [...prev, index]);
-        }, 300 * (index + 1))
+        }, 800 * (index + 1))
       );
     });
 
@@ -88,7 +88,7 @@ export default function IntroPage() {
           {currentPage.paragraphs.map((paragraph, index) => (
             <p
               key={`${pageNum}-${index}`}
-              className="text-base leading-loose whitespace-pre-line transition-opacity duration-700"
+              className="text-base leading-loose whitespace-pre-line transition-opacity duration-1000"
               style={{
                 color:
                   pageNum === 4 && index === 4

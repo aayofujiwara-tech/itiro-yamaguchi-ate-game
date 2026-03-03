@@ -201,6 +201,22 @@ export default function QuizModeSelect() {
             ))}
           </div>
         </div>
+
+        <div className="text-center mt-8 mb-4">
+          <Link
+            href="/intro/1"
+            className="text-sm transition-colors duration-200"
+            style={{ color: "#9ca3af" }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = "var(--accent)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.color = "#9ca3af";
+            }}
+          >
+            このサイトの原点を読み直す
+          </Link>
+        </div>
       </div>
     </div>
     <Footer />
