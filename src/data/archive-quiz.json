@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "questionType": "description",
+    "descriptionText": "（ここに配信内容の説明文が入ります）",
+    "question": null,
+    "answer": "（ここに正解の配信回タイトルが入ります）",
+    "options": [
+      "（ここに正解の配信回タイトルが入ります）",
+      "ダミー選択肢A",
+      "ダミー選択肢B",
+      "ダミー選択肢C"
+    ],
+    "explanation": "（ここに解説が入ります）",
+    "difficulty": "medium",
+    "streamTitle": "（配信タイトル）",
+    "streamDate": null,
+    "youtubeUrl": "https://www.youtube.com/@ichiro_yamaguchi",
+    "youtubeLabel": null,
+    "highlight": "（ここに見どころコメントが入ります）",
+    "category": null
+  }
+]

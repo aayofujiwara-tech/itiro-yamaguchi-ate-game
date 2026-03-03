@@ -12,18 +12,37 @@ import LyricsFillQuestion from "./LyricsFillQuestion";
 import LyricsIntroQuestion from "./LyricsIntroQuestion";
 import QuoteQuestion from "./QuoteQuestion";
 import SpotifyLink from "./SpotifyLink";
+import OfficialLink from "./OfficialLink";
+import QuizImage from "./QuizImage";
 import Footer from "./Footer";
 
 import cultData from "@/data/cult-quiz.json";
 import lyricsFillData from "@/data/lyrics-fill.json";
 import lyricsIntroData from "@/data/lyrics-intro.json";
 import quotesData from "@/data/ichiro-quotes.json";
+import archiveData from "@/data/archive-quiz.json";
+import type { ArchiveQuizQuestion, ArchiveQuestionType } from "@/types/archive-quiz";
+
+const DEFAULT_ARCHIVE_QUESTIONS: Record<ArchiveQuestionType, string> = {
+  image: "この画像はどの配信回のものでしょう？",
+  quote: "この発言があった配信回はどれでしょう？",
+  description: "この内容の配信回はどれでしょう？",
+  reverse: "この配信回で行われた内容はどれでしょう？",
+};
+
+const ARCHIVE_TYPE_LABELS: Record<ArchiveQuestionType, string> = {
+  image: "📸 画像当て",
+  quote: "💬 発言当て",
+  description: "📝 説明文当て",
+  reverse: "🔄 逆引き",
+};
 
 const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> = {
   cult: { icon: "🧠", label: "カルトクイズ" },
   "lyrics-fill": { icon: "📝", label: "歌詞穴埋め" },
   "lyrics-intro": { icon: "🎵", label: "イントロ歌詞当て" },
   quotes: { icon: "💬", label: "一郎語録当て" },
+  archive: { icon: "🔄", label: "遡行型遡上" },
 };
 
 const DIFFICULTY_LABELS: Record<RandomDifficulty, string> = {
@@ -86,6 +105,18 @@ function loadRandomQuizItems(difficulty: RandomDifficulty): RandomQuizItem[] {
     if (q.difficulty === difficulty) {
       items.push({
         quizType: "quotes",
+        id: q.id,
+        answer: q.answer,
+        options: q.options,
+        raw: q as unknown as Record<string, unknown>,
+      });
+    }
+  }
+
+  for (const q of archiveData as ArchiveQuizQuestion[]) {
+    if (q.difficulty === difficulty) {
+      items.push({
+        quizType: "archive",
         id: q.id,
         answer: q.answer,
         options: q.options,
@@ -266,6 +297,69 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
             answered={answered}
           />
         );
+      case "archive": {
+        const aq = raw as unknown as ArchiveQuizQuestion;
+        const qType = aq.questionType;
+        const questionText = aq.question || DEFAULT_ARCHIVE_QUESTIONS[qType];
+        return (
+          <div className="mb-6">
+            <span
+              className="inline-block text-xs px-3 py-1 rounded-full mb-4"
+              style={{
+                backgroundColor: "rgba(0, 212, 255, 0.1)",
+                color: "var(--accent)",
+                border: "1px solid rgba(0, 212, 255, 0.2)",
+              }}
+            >
+              {ARCHIVE_TYPE_LABELS[qType]}
+            </span>
+            <p className="text-lg mb-4" style={{ color: "var(--text-main)" }}>
+              {questionText}
+            </p>
+            {qType === "image" && aq.imageKey && (
+              <QuizImage imageId={aq.imageKey} questionNumber={currentIndex + 1} />
+            )}
+            {qType === "quote" && aq.quoteText && (
+              <blockquote
+                className="pl-4 py-2 mb-4 italic"
+                style={{ borderLeft: "2px solid var(--accent)", color: "#d1d5db" }}
+              >
+                「{aq.quoteText}」
+              </blockquote>
+            )}
+            {qType === "description" && aq.descriptionText && (
+              <div
+                className="rounded-lg p-4 mb-4 text-sm leading-relaxed"
+                style={{
+                  backgroundColor: "var(--bg-card)",
+                  border: "1px solid var(--border)",
+                  color: "#d1d5db",
+                }}
+              >
+                {aq.descriptionText}
+              </div>
+            )}
+            {qType === "reverse" && aq.reverseTitle && (
+              <div
+                className="rounded-lg p-4 mb-4 text-center"
+                style={{
+                  backgroundColor: "var(--bg-card)",
+                  border: "1px solid var(--border)",
+                }}
+              >
+                <p className="text-lg font-bold" style={{ color: "var(--accent)" }}>
+                  {aq.reverseTitle}
+                </p>
+                {aq.streamDate && (
+                  <p className="text-xs mt-1" style={{ color: "#6b7280" }}>
+                    {aq.streamDate}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        );
+      }
     }
   };
 
@@ -291,10 +385,72 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
   };
 
   const renderPostAnswerContent = () => {
+    const quizType = currentQuiz.quizType;
+
+    // Archive quiz: custom post-answer content
+    if (quizType === "archive") {
+      const aq = raw as unknown as ArchiveQuizQuestion;
+      return (
+        <div className="space-y-3 animate-fade-in">
+          {aq.explanation && (
+            <div
+              className="text-sm px-4 py-3 rounded-md"
+              style={{
+                backgroundColor: "rgba(0, 212, 255, 0.05)",
+                border: "1px solid rgba(0, 212, 255, 0.15)",
+                color: "var(--text-sub)",
+              }}
+            >
+              <span style={{ color: "var(--accent)" }} className="font-medium">解説: </span>
+              {aq.explanation}
+            </div>
+          )}
+          <a
+            href={aq.youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm px-4 py-3 rounded-md transition-colors duration-200"
+            style={{
+              backgroundColor: "rgba(255, 0, 0, 0.05)",
+              border: "1px solid rgba(255, 0, 0, 0.15)",
+              color: "#f87171",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(255, 0, 0, 0.05)";
+            }}
+          >
+            📺 {aq.youtubeLabel || aq.streamTitle}
+            {aq.streamDate && (
+              <span className="text-xs" style={{ color: "#6b7280" }}>
+                ({aq.streamDate})
+              </span>
+            )}
+          </a>
+          {aq.highlight && (
+            <div
+              className="rounded-lg p-3"
+              style={{
+                backgroundColor: "var(--bg-card)",
+                border: "1px solid var(--border)",
+              }}
+            >
+              <p className="text-xs mb-1" style={{ color: "#6b7280" }}>💡 見どころ</p>
+              <p className="text-sm" style={{ color: "#d1d5db" }}>{aq.highlight}</p>
+            </div>
+          )}
+          <div className="flex justify-center">
+            <OfficialLink href="https://sakanaction.jp" label="🐟 サカナクション公式" />
+          </div>
+        </div>
+      );
+    }
+
     const relatedSong = raw.relatedSong as string | null | undefined;
     const contributor = raw.contributor as string | null | undefined;
     const explanation = raw.explanation as string | undefined;
-    const quizType = currentQuiz.quizType;
 
     // Determine Spotify song title based on quiz type
     let spotifySong: string | null = null;

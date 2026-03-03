@@ -1,6 +1,6 @@
 export type QuizMode = "image" | "cult" | "lyrics-fill" | "lyrics-intro" | "quotes";
 
-export type RandomQuizType = "cult" | "lyrics-fill" | "lyrics-intro" | "quotes";
+export type RandomQuizType = "cult" | "lyrics-fill" | "lyrics-intro" | "quotes" | "archive";
 export type RandomDifficulty = "easy" | "medium" | "hard";
 
 export interface RandomQuizItem {

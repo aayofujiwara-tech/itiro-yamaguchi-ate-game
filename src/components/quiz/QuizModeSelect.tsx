@@ -8,6 +8,7 @@ import cultData from "@/data/cult-quiz.json";
 import lyricsFillData from "@/data/lyrics-fill.json";
 import lyricsIntroData from "@/data/lyrics-intro.json";
 import quotesData from "@/data/ichiro-quotes.json";
+import archiveData from "@/data/archive-quiz.json";
 
 const randomModes = [
   {
@@ -73,6 +74,14 @@ const modes: ModeConfig[] = [
     description: "山口一郎の名言の場面を当てよう",
     path: "/quiz/quotes",
     questionCount: quotesData.length,
+  },
+  {
+    mode: "archive",
+    title: "遡行型遡上",
+    icon: "🔄",
+    description: "アーカイブ配信から出題",
+    path: "/quiz/archive",
+    questionCount: archiveData.length,
   },
 ];
 

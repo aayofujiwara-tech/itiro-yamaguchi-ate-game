@@ -10,6 +10,7 @@ const QUIZ_TYPE_LABELS: Record<RandomQuizType, { icon: string; label: string }> 
   "lyrics-fill": { icon: "📝", label: "歌詞穴埋め" },
   "lyrics-intro": { icon: "🎵", label: "イントロ歌詞当て" },
   quotes: { icon: "💬", label: "一郎語録" },
+  archive: { icon: "🔄", label: "遡行型遡上" },
 };
 
 const DIFFICULTY_LABELS: Record<RandomDifficulty, string> = {
