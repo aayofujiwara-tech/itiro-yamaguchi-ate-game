@@ -114,6 +114,16 @@ export default function PasswordGate({ children }: PasswordGateProps) {
             入場する
           </button>
         </form>
+
+        <div className="text-center mt-8">
+          <a
+            href="/intro/1"
+            className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            このサイトの原点を読み直す
+          </a>
+        </div>
       </div>
       </div>
       <Footer />
