@@ -44,7 +44,7 @@ export default function QuizResult({
 
       <button
         onClick={onNext}
-        className="w-full py-3 rounded-lg text-base font-medium transition-all duration-200 cursor-pointer"
+        className="w-full py-3.5 md:py-3 rounded-lg text-sm md:text-base font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
         style={{
           backgroundColor: "transparent",
           color: "var(--accent)",

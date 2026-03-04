@@ -160,8 +160,8 @@ export default function ArchiveQuizGame() {
           className="min-h-screen flex flex-col"
           style={{ backgroundColor: "var(--bg-primary)" }}
         >
-          <div className="flex-1 flex flex-col items-center justify-center px-4">
-            <div className="w-full max-w-md text-center animate-fade-in">
+          <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-6">
+            <div className="w-full max-w-sm md:max-w-lg text-center animate-fade-in">
               <div className="text-4xl mb-4">🔄</div>
               <h1
                 className="text-2xl md:text-3xl font-bold mb-3"
@@ -170,12 +170,12 @@ export default function ArchiveQuizGame() {
                 遡行型遡上
               </h1>
               <p
-                className="text-base mb-8"
+                className="text-sm md:text-base mb-8"
                 style={{ color: "var(--text-sub)" }}
               >
                 全{totalQuestions}問中、何問挑戦する？
               </p>
-              <div className="flex flex-wrap gap-3 justify-center mb-8">
+              <div className="grid grid-cols-2 gap-2.5 md:flex md:flex-wrap md:gap-3 md:justify-center mb-8">
                 {countOptions.map((count, idx) => {
                   const isAll = idx === countOptions.length - 1;
                   const label = isAll ? `全${count}問` : `${count}問`;
@@ -183,12 +183,11 @@ export default function ArchiveQuizGame() {
                     <button
                       key={count}
                       onClick={() => setQuestionCount(count)}
-                      className="px-6 py-4 rounded-xl text-base font-medium transition-all duration-200 cursor-pointer"
+                      className="px-4 py-3.5 md:px-6 md:py-4 rounded-xl text-sm md:text-base font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
                       style={{
                         backgroundColor: "var(--bg-card)",
                         color: "var(--text-main)",
                         border: "1px solid var(--border)",
-                        minWidth: "100px",
                       }}
                       onMouseOver={(e) => {
                         e.currentTarget.style.borderColor = "var(--accent)";
@@ -370,7 +369,7 @@ export default function ArchiveQuizGame() {
           href={currentQuiz.youtubeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm px-4 py-3 rounded-md transition-colors duration-200"
+          className="flex items-center gap-2 text-xs md:text-sm px-4 py-3 rounded-md transition-colors duration-200 min-h-[44px]"
           style={{
             backgroundColor: "rgba(255, 0, 0, 0.05)",
             border: "1px solid rgba(255, 0, 0, 0.15)",
@@ -426,14 +425,14 @@ export default function ArchiveQuizGame() {
         className="min-h-screen flex flex-col"
         style={{ backgroundColor: "var(--bg-primary)" }}
       >
-        <div className="flex-1 flex flex-col items-center px-4 py-8 md:py-12">
-          <div className="w-full max-w-2xl" key={fadeKey}>
+        <div className="flex-1 flex flex-col items-center px-4 py-6 md:px-6 md:py-8">
+          <div className="w-full max-w-sm md:max-w-lg" key={fadeKey}>
             {/* Header */}
-            <div className="flex items-center justify-between mb-6 animate-fade-in">
-              <div className="flex items-center gap-3">
+            <div className="flex items-center justify-between mb-4 md:mb-6 animate-fade-in">
+              <div className="flex items-center gap-2 md:gap-3">
                 <Link
                   href="/"
-                  className="text-sm transition-colors duration-200"
+                  className="text-xs md:text-sm transition-colors duration-200 min-h-[44px] flex items-center"
                   style={{ color: "var(--text-sub)" }}
                   onMouseOver={(e) => {
                     e.currentTarget.style.color = "var(--accent)";
@@ -445,7 +444,7 @@ export default function ArchiveQuizGame() {
                   ← 戻る
                 </Link>
                 <h1
-                  className="text-lg md:text-xl font-bold"
+                  className="text-base md:text-xl font-bold"
                   style={{ color: "var(--text-main)" }}
                 >
                   遡行型遡上
@@ -464,7 +463,7 @@ export default function ArchiveQuizGame() {
 
             {/* Progress bar */}
             <div
-              className="w-full h-1 rounded-full mb-8 animate-fade-in"
+              className="w-full h-1 rounded-full mb-4 md:mb-6 animate-fade-in"
               style={{ backgroundColor: "var(--border)" }}
             >
               <div

@@ -49,16 +49,16 @@ export default function PasswordGate({ children }: PasswordGateProps) {
       style={{ backgroundColor: "var(--bg-primary)" }}
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="flex-1 flex items-center justify-center px-4">
-      <div className="w-full max-w-sm animate-fade-in">
+      <div className="flex-1 flex items-center justify-center px-5 md:px-6">
+      <div className="w-full max-w-sm md:max-w-md animate-fade-in">
         <div className="text-center mb-8">
           <h1
-            className="text-3xl sm:text-4xl font-bold mb-1"
+            className="text-2xl md:text-3xl font-bold mb-2"
             style={{ color: "var(--text-main)" }}
           >
             🐟 深海探査レベル測定
           </h1>
-          <p className="text-sm" style={{ color: "var(--text-sub)" }}>
+          <p className="text-xs md:text-sm" style={{ color: "var(--text-sub)" }}>
             参加にはパスワードが必要です
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
               }}
               placeholder="パスワードを入力"
               autoFocus
-              className={`w-full px-4 py-3 rounded-lg text-sm${error ? " border-error" : ""}`}
+              className={`w-full px-4 py-3 rounded-lg text-sm min-h-[44px]${error ? " border-error" : ""}`}
               style={{
                 backgroundColor: "var(--bg-card)",
                 color: "var(--text-main)",
@@ -94,7 +94,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
 
           <button
             type="submit"
-            className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+            className="w-full py-3.5 md:py-3 rounded-lg text-sm md:text-base font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
             style={{
               backgroundColor: "transparent",
               color: "var(--accent)",
@@ -118,7 +118,7 @@ export default function PasswordGate({ children }: PasswordGateProps) {
         <div className="text-center mt-8">
           <a
             href="/intro/1"
-            className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+            className="text-sm text-gray-400 hover:text-cyan-400 transition-colors min-h-[44px] inline-flex items-center"
             onClick={(e) => e.stopPropagation()}
           >
             このサイトの原点を読み直す

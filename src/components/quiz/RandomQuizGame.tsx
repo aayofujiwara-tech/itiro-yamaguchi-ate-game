@@ -505,14 +505,14 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
         className="min-h-screen flex flex-col"
         style={{ backgroundColor: "var(--bg-primary)" }}
       >
-      <div className="flex-1 flex flex-col items-center px-4 py-8 md:py-12">
-        <div className="w-full max-w-2xl" key={fadeKey}>
+      <div className="flex-1 flex flex-col items-center px-4 py-6 md:px-6 md:py-8">
+        <div className="w-full max-w-sm md:max-w-lg" key={fadeKey}>
           {/* Header */}
-          <div className="flex items-center justify-between mb-6 animate-fade-in">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between mb-4 md:mb-6 animate-fade-in">
+            <div className="flex items-center gap-2 md:gap-3 min-w-0">
               <Link
                 href="/"
-                className="text-sm transition-colors duration-200"
+                className="text-xs md:text-sm transition-colors duration-200 min-h-[44px] flex items-center flex-shrink-0"
                 style={{ color: "var(--text-sub)" }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.color = "var(--accent)";
@@ -524,7 +524,7 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
                 ← 戻る
               </Link>
               <h1
-                className="text-lg md:text-xl font-bold"
+                className="text-sm md:text-xl font-bold truncate"
                 style={{ color: "var(--text-main)" }}
               >
                 🎲 深海探査（{DIFFICULTY_LABELS[difficulty]}）
@@ -543,7 +543,7 @@ export default function RandomQuizGame({ difficulty }: RandomQuizGameProps) {
 
           {/* Progress bar */}
           <div
-            className="w-full h-1 rounded-full mb-6 animate-fade-in"
+            className="w-full h-1 rounded-full mb-4 md:mb-6 animate-fade-in"
             style={{ backgroundColor: "var(--border)" }}
           >
             <div

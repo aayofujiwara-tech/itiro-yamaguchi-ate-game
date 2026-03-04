@@ -60,13 +60,13 @@ export default function QuizOptions({
   };
 
   return (
-    <div className="w-full space-y-3 mb-6">
+    <div className="w-full space-y-2.5 md:space-y-3 mb-6">
       {options.map((option, index) => (
         <button
           key={`${option}-${index}`}
           onClick={() => !answered && onSelect(option)}
           disabled={answered}
-          className={`w-full text-left px-5 py-4 rounded-lg text-sm md:text-base font-medium cursor-pointer disabled:cursor-default ${getAnimationClass(option)}`}
+          className={`w-full text-left px-4 py-3.5 md:px-5 md:py-4 rounded-lg text-sm md:text-base font-medium cursor-pointer disabled:cursor-default min-h-[48px] active:border-cyan-400 ${getAnimationClass(option)}`}
           style={getButtonStyle(option)}
           onMouseOver={(e) => {
             if (!answered) {

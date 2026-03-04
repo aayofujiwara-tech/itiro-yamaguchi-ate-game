@@ -55,27 +55,27 @@ export default function RankShareCard({ scorePercent }: RankShareCardProps) {
     <div className="mb-6">
       {/* Rank Card */}
       <div
-        className="rounded-xl p-6 mb-4 text-center"
+        className="rounded-xl p-5 md:p-6 mb-4 text-center"
         style={{
           backgroundColor: "var(--bg-card)",
           border: "1px solid rgba(0, 212, 255, 0.4)",
         }}
       >
-        <div className="text-4xl mb-2">{rank.emoji}</div>
+        <div className="text-3xl md:text-4xl mb-2">{rank.emoji}</div>
         <div
-          className="text-2xl font-bold mb-1"
+          className="text-lg md:text-2xl font-bold mb-1"
           style={{ color: "var(--accent)" }}
         >
           {rank.title}
         </div>
         <div
-          className="text-sm mb-2"
+          className="text-xs md:text-sm mb-2"
           style={{ color: "#9ca3af" }}
         >
           {rank.depth}（水深 {rank.depthRange}）
         </div>
         <p
-          className="text-base italic"
+          className="text-sm md:text-base italic"
           style={{ color: "#d1d5db" }}
         >
           {rank.description}
@@ -86,7 +86,7 @@ export default function RankShareCard({ scorePercent }: RankShareCardProps) {
       {canNativeShare ? (
         <button
           onClick={handleNativeShare}
-          className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+          className="w-full py-3.5 md:py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 min-h-[44px]"
           style={{
             backgroundColor: "var(--accent)",
             color: "#000",
@@ -103,7 +103,7 @@ export default function RankShareCard({ scorePercent }: RankShareCardProps) {
         <div className="flex gap-3">
           <button
             onClick={handleTwitterShare}
-            className="flex-1 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+            className="flex-1 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 min-h-[44px]"
             style={{
               backgroundColor: "#000",
               color: "#fff",
@@ -123,7 +123,7 @@ export default function RankShareCard({ scorePercent }: RankShareCardProps) {
           </button>
           <button
             onClick={handleCopy}
-            className="flex-1 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
+            className="flex-1 py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 min-h-[44px]"
             style={{
               backgroundColor: "transparent",
               color: "var(--accent)",

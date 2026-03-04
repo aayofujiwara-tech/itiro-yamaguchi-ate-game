@@ -42,36 +42,36 @@ export default function QuizSummary({
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
-      <div className="flex-1 flex items-center justify-center px-4">
-        <div className="max-w-md w-full text-center animate-fade-in">
+      <div className="flex-1 flex items-center justify-center px-4 py-8 md:px-6 md:py-12">
+        <div className="max-w-sm w-full md:max-w-lg text-center animate-fade-in">
           <h2
-            className="text-3xl font-bold mb-8"
+            className="text-2xl md:text-3xl font-bold mb-6 md:mb-8"
             style={{ color: "var(--text-main)" }}
           >
             クイズ結果
           </h2>
 
           <div
-            className="rounded-xl p-8 mb-8"
+            className="rounded-xl p-5 md:p-6 mb-4"
             style={{
               backgroundColor: "var(--bg-card)",
               border: "1px solid var(--border)",
             }}
           >
             <div
-              className="text-6xl font-bold mb-2"
+              className="text-4xl md:text-5xl font-bold mb-2"
               style={{
                 color: getScoreColor(),
                 fontFamily: "Inter, monospace",
               }}
             >
               {score}
-              <span className="text-2xl" style={{ color: "var(--text-sub)" }}>
+              <span className="text-lg md:text-xl" style={{ color: "var(--text-sub)" }}>
                 /{total}
               </span>
             </div>
             <div
-              className="text-lg mb-4"
+              className="text-sm md:text-lg mb-4"
               style={{
                 color: "var(--text-sub)",
                 fontFamily: "Inter, monospace",
@@ -81,14 +81,14 @@ export default function QuizSummary({
             </div>
             {hintUsedCount > 0 && (
               <div
-                className="text-sm mb-4"
+                className="text-xs md:text-sm mb-4"
                 style={{ color: "var(--text-sub)" }}
               >
                 ヒント使用: {hintUsedCount}回
               </div>
             )}
             <p
-              className="text-base"
+              className="text-sm md:text-base"
               style={{ color: "var(--text-main)" }}
             >
               {getMessage()}
@@ -97,10 +97,10 @@ export default function QuizSummary({
 
           <RankShareCard scorePercent={percentage} />
 
-          <div className="space-y-3">
+          <div className="space-y-2.5 md:space-y-3">
             <button
               onClick={onRestart}
-              className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
+              className="w-full py-3.5 md:py-4 rounded-lg text-sm md:text-lg font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
               style={{
                 backgroundColor: "transparent",
                 color: "var(--accent)",
@@ -122,7 +122,7 @@ export default function QuizSummary({
             {onBackToSelect && (
               <button
                 onClick={onBackToSelect}
-                className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+                className="w-full py-3 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
                 style={{
                   backgroundColor: "transparent",
                   color: "var(--text-sub)",
@@ -144,7 +144,7 @@ export default function QuizSummary({
             {backHref && (
               <Link
                 href={backHref}
-                className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200"
+                className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200 min-h-[44px] flex items-center justify-center"
                 style={{
                   color: "var(--text-sub)",
                   border: "1px solid var(--border)",

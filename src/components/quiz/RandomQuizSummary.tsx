@@ -57,36 +57,36 @@ export default function RandomQuizSummary({
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
-      <div className="flex-1 flex items-center justify-center px-4 py-8">
-        <div className="max-w-md w-full text-center animate-fade-in">
+      <div className="flex-1 flex items-center justify-center px-4 py-8 md:px-6 md:py-12">
+        <div className="max-w-sm w-full md:max-w-lg text-center animate-fade-in">
           <h2
-            className="text-3xl font-bold mb-8"
+            className="text-xl md:text-3xl font-bold mb-6 md:mb-8"
             style={{ color: "var(--text-main)" }}
           >
             🎲 探査結果（{DIFFICULTY_LABELS[difficulty]}）
           </h2>
 
           <div
-            className="rounded-xl p-8 mb-6"
+            className="rounded-xl p-5 md:p-6 mb-4"
             style={{
               backgroundColor: "var(--bg-card)",
               border: "1px solid var(--border)",
             }}
           >
             <div
-              className="text-6xl font-bold mb-2"
+              className="text-4xl md:text-5xl font-bold mb-2"
               style={{
                 color: getScoreColor(),
                 fontFamily: "Inter, monospace",
               }}
             >
               {score}
-              <span className="text-2xl" style={{ color: "var(--text-sub)" }}>
+              <span className="text-lg md:text-xl" style={{ color: "var(--text-sub)" }}>
                 /{total}
               </span>
             </div>
             <div
-              className="text-lg mb-4"
+              className="text-sm md:text-lg mb-4"
               style={{
                 color: "var(--text-sub)",
                 fontFamily: "Inter, monospace",
@@ -95,7 +95,7 @@ export default function RandomQuizSummary({
               正答率 {Math.round(percentage * 100)}%
             </div>
             <p
-              className="text-base"
+              className="text-sm md:text-base"
               style={{ color: "var(--text-main)" }}
             >
               {getMessage()}
@@ -106,19 +106,19 @@ export default function RandomQuizSummary({
 
           {/* カテゴリ別成績 */}
           <div
-            className="rounded-xl p-6 mb-8 text-left"
+            className="rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left"
             style={{
               backgroundColor: "var(--bg-card)",
               border: "1px solid var(--border)",
             }}
           >
             <p
-              className="text-sm font-bold mb-4"
+              className="text-xs md:text-sm font-bold mb-3 md:mb-4"
               style={{ color: "var(--text-main)" }}
             >
               📊 カテゴリ別成績
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2.5 md:space-y-3">
               {categoryScores.map((cs) => {
                 const info = QUIZ_TYPE_LABELS[cs.quizType];
                 return (
@@ -127,13 +127,13 @@ export default function RandomQuizSummary({
                     className="flex items-center justify-between"
                   >
                     <span
-                      className="text-sm"
+                      className="text-xs md:text-sm"
                       style={{ color: "var(--text-sub)" }}
                     >
                       {info.icon} {info.label}
                     </span>
                     <span
-                      className="text-sm font-medium"
+                      className="text-xs md:text-sm font-medium"
                       style={{
                         color: "var(--text-main)",
                         fontFamily: "Inter, monospace",
@@ -147,10 +147,10 @@ export default function RandomQuizSummary({
             </div>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-2.5 md:space-y-3">
             <button
               onClick={onRestart}
-              className="w-full py-4 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer"
+              className="w-full py-3.5 md:py-4 rounded-lg text-sm md:text-lg font-medium transition-all duration-200 cursor-pointer min-h-[44px]"
               style={{
                 backgroundColor: "transparent",
                 color: "var(--accent)",
@@ -171,7 +171,7 @@ export default function RandomQuizSummary({
 
             <Link
               href="/"
-              className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200"
+              className="block w-full py-3 rounded-lg text-sm font-medium text-center transition-all duration-200 min-h-[44px] flex items-center justify-center"
               style={{
                 color: "var(--text-sub)",
                 border: "1px solid var(--border)",

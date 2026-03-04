@@ -70,25 +70,25 @@ export default function IntroPage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-12"
+      className="min-h-screen flex flex-col items-center justify-center px-5 py-10 md:px-6 md:py-12"
       style={{ backgroundColor: "#000" }}
     >
       <div
-        className={`max-w-md w-full transition-opacity duration-400 ${
+        className={`max-w-sm w-full md:max-w-md transition-opacity duration-400 ${
           fadeOut ? "opacity-0" : "opacity-100"
         }`}
       >
         {/* Page number */}
-        <p className="text-xs mb-8" style={{ color: "#6b7280" }}>
+        <p className="text-xs mb-6 md:mb-8" style={{ color: "#6b7280" }}>
           {pageNum} / {TOTAL_PAGES}
         </p>
 
         {/* Paragraphs */}
-        <div className="space-y-6 mb-12">
+        <div className="space-y-5 mb-10 md:space-y-6 md:mb-12">
           {currentPage.paragraphs.map((paragraph, index) => (
             <p
               key={`${pageNum}-${index}`}
-              className="text-base leading-loose whitespace-pre-line transition-opacity duration-1000"
+              className="text-sm md:text-base leading-loose whitespace-pre-line transition-opacity duration-1000"
               style={{
                 color:
                   pageNum === 4 && index === 4
@@ -107,7 +107,7 @@ export default function IntroPage() {
         <div className="space-y-4">
           <button
             onClick={handleNext}
-            className="w-full py-3 rounded-lg font-bold transition-colors duration-200 cursor-pointer"
+            className="w-full py-3.5 md:py-3 rounded-lg font-bold text-sm md:text-base transition-colors duration-200 cursor-pointer min-h-[44px]"
             style={{
               backgroundColor: "var(--accent)",
               color: "#000",
@@ -119,7 +119,7 @@ export default function IntroPage() {
           {!isLastPage && (
             <button
               onClick={handleSkip}
-              className="w-full py-2 text-xs transition-colors duration-200 cursor-pointer"
+              className="w-full text-xs transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center justify-center"
               style={{
                 color: "#6b7280",
                 backgroundColor: "transparent",
@@ -132,7 +132,7 @@ export default function IntroPage() {
         </div>
 
         {/* Dot indicators */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-6 md:mt-8">
           {[1, 2, 3, 4].map((n) => (
             <div
               key={n}
